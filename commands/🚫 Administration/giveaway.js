@@ -166,7 +166,7 @@ module.exports = {
             }
             client.giveawaysManager.start(giveawayChannel, {
                 time: giveawayDuration,
-                prize: `<a:Gift:853993605868683285> ${giveawayPrize} <a:Gift:853993605868683285>`,
+                prize: `<:Gift:914399217869545573> ${giveawayPrize} <:Gift:914399217869545573>`,
                 winnerCount: giveawayNumberWinners,
                 hostedBy: message.author,
                 embedColorEnd: es.wrongcolor,
@@ -181,7 +181,7 @@ module.exports = {
                     noWinner: 'Giveaway cancelled, no valid participations.',
                     hostedBy: 'Hosted by: {user}',
                     winners: giveawayNumberWinners == 1 ? 'Winner' : "Winners",
-                    before_winners: "<:arrow:832598861813776394>",
+                    before_winners: "<:RGBARROWRIGHT:914738789681885214>",
                     endedAt: 'Ended at',
                     units: {
                         seconds: 'Seconds',
@@ -193,7 +193,7 @@ module.exports = {
                 }
             });
 
-            message.reply(`<a:yes:833101995723194437> **Started the Giveaway in:** ${giveawayChannel}!`);
+            message.reply(`<:GreenCheck:914034845112479774> **Started the Giveaway in:** ${giveawayChannel}!`);
             // And the giveaway has started!
         } else if (args[0].toLowerCase() === "end") {
             args.shift();

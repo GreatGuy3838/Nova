@@ -21,9 +21,9 @@ var {
       client.manager
         .on("playerCreate", async (player) => {
             let es = client.settings.get(player.guild, "embed") || ee;
-            player.set("autoplay", false);
-            player.set(`afk-${player.guild}`, false)
-            player.set(`afk-${player.get("playerauthor")}`, false)
+            player.set("autoplay", true);
+            player.set(`afk-${player.guild}`, true)
+            player.set(`afk-${player.get("playerauthor")}`, true)
             databasing(client, player.guild, player.get("playerauthor"));
   
             var embed = new MessageEmbed();
@@ -32,7 +32,7 @@ var {
             } catch {}
             try {
               embed.setDescription(`**Commands bound to: ** <#${client.channels.cache.get(player.textChannel).id}>`)
-              embed.addField(`<:Milrato:840259659163893820> Music Powered by Milrato.eu`, `**[Invite their Public Bot](https://discord.com/api/oauth2/authorize?client_id=784364932149280778&permissions=8&scope=bot)  •  [WEBSITE](https://milrato.eu)  •  [Get your OWN BOT](https://discord.gg/FQGXbypRf8)**`)
+              embed.addField(`${client.user.username} Powered by BROKARONAGAMING`, `**[Invite their Public Bot](https://discord.com/api/oauth2/authorize?client_id=855662770757435422&permissions=8&scope=bot) •  [Support Server](https://discord.gg/xWgyrzp74m)**`)
             } catch {}
 
             await client.channels.cache.get(player.textChannel).send(embed.setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)).catch(e=>console.log("this prevents a crash"));
@@ -103,12 +103,16 @@ var {
             });
             // playANewTrack(client,player,track);
             var embed = new MessageEmbed().setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-              embed.setAuthor(`${track.title}`, "https://cdn.discordapp.com/emojis/859459305152708630.gif?v=1")
-              embed.setURL(track.uri)
+              embed.setAuthor(`${track.title}`,"https://cdn.discordapp.com/emojis/873772866917761055.gif?v=1")
               embed.setThumbnail(`https://img.youtube.com/vi/${track.identifier}/mqdefault.jpg`)
               embed.addField(`**${emoji.msg.time} Duration: **`, `\`❯ ${track.isStream ? `LIVE STREAM` : format(track.duration)}\``, true)
               embed.addField(`**${emoji.msg.song_by} Song By:**`, `\`❯ ${track.author}\``, true)
               embed.addField(`**${emoji.msg.repeat_mode} Queue length:**`, `\`❯ ${player.queue.length} Songs\``, true)
+              embed.addField(`:question: Queue Status`, `** **`)
+              embed.addField(`${emoji.msg.raise_volume} Volume`, `${player.volume}%`, true)
+              embed.addField(`${player.queueRepeat ? `${emoji.msg.autoplay_mode} Queue Loop: ` : `${emoji.msg.autoplay_mode} Song Loop: `}`, `${player.queueRepeat ? `${emoji.msg.SUCCESS} Enabled` : player.trackRepeat ? `${emoji.msg.SUCCESS} Enabled` : `${emoji.msg.ERROR} Disabled`}`, true)
+              embed.addField(`${emoji.msg.autoplay_mode} Autoplay`, `${player.get(`autoplay`) ? `${emoji.msg.SUCCESS} Enabled` : `${emoji.msg.ERROR} Disabled`}`, true)
+              embed.addField(`${emoji.msg.premium} 24/7 AFK Setup`, `PLAYER: ${player.get(`afk-${player.get(`playerauthor`)}`) ? `${emoji.msg.SUCCESS} Enabled` : `${emoji.msg.ERROR} Disabled`}\nGUILD: ${player.get(`afk-${player.guild}`) ? `${emoji.msg.SUCCESS} Enabled` : `${emoji.msg.ERROR} Disabled`}`, true)
               embed.setFooter(`Requested by: ${track.requester.tag}`, track.requester.displayAvatarURL({dynamic: true}));
             //if pruning is enabled --> send the msg
             if (client.settings.get(player.guild, `pruning`))
@@ -675,13 +679,3 @@ var {
           }
         });
   };
-  /**
-   * @INFO
-   * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
-   * @INFO
-   * Work for Milrato Development | https://milrato.eu
-   * @INFO
-   * Please mention Him / Milrato Development, when using this Code!
-   * @INFO
-   */
-  

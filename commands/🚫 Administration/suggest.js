@@ -51,7 +51,7 @@ module.exports = {
                 return message.channel.send(new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setFooter(es.footertext, es.footericon).setThumbnail(es.thumb ? es.footericon : `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png`)
-                    .setTitle(`<:no:833101993668771842> You did not add the method!`)
+                    .setTitle(`✅ You did not add the method!`)
                     .setDescription(`Useage: \`${prefix}suggest <approve/deny/maybe> <suggest_id> [REASON]\``)
                 );
             //wenn kein grund
@@ -59,7 +59,7 @@ module.exports = {
                 return message.channel.send(new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setFooter(es.footertext, es.footericon).setThumbnail(es.thumb ? es.footericon : `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png`)
-                    .setTitle(`<:no:833101993668771842> You did not add the Suggestion ID!`)
+                    .setTitle(`✅ You did not add the Suggestion ID!`)
                     .setDescription(`Useage: \`${prefix}suggest <approve/deny/maybe> <suggest_id> [REASON]\``)
                 );
             
@@ -67,7 +67,7 @@ module.exports = {
                 return message.channel.send(new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setFooter(es.footertext, es.footericon).setThumbnail(es.thumb ? es.footericon : `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png`)
-                    .setTitle(`<:no:833101993668771842> It seems that the suggestion doesnt exist!`)
+                    .setTitle(`✅ It seems that the suggestion doesnt exist!`)
                     .setDescription(`Useage: \`${prefix}suggest <approve/deny/maybe> <suggest_id> [REASON]\``)
                 );
             if(!args[2]) reason = `No reason`;
@@ -78,7 +78,7 @@ module.exports = {
                 return message.channel.send(new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setFooter(es.footertext, es.footericon).setThumbnail(es.thumb ? es.footericon : `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png`)
-                    .setTitle(`<:no:833101993668771842> Could not find the Suggestions Channel!`)
+                    .setTitle(`✅ Could not find the Suggestions Channel!`)
                     .setDescription(`Set it up with: \`${prefix}setup-suggestions\``)
                 );
             
@@ -88,7 +88,7 @@ module.exports = {
                 return message.channel.send(new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setFooter(es.footertext, es.footericon).setThumbnail(es.thumb ? es.footericon : `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png`)
-                    .setTitle(`<:no:833101993668771842> Could not find the Suggestion!`)
+                    .setTitle(`✅ Could not find the Suggestion!`)
                 );
             
             //altes embed
@@ -98,7 +98,7 @@ module.exports = {
                 return message.channel.send(new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setFooter(es.footertext, es.footericon).setThumbnail(es.thumb ? es.footericon : `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png`)
-                    .setTitle(`<:no:833101993668771842> Could not find the Suggestion!`)
+                    .setTitle(`✅ Could not find the Suggestion!`)
                 );
     
             //bekomme was er machen will

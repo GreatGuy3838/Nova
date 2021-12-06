@@ -43,29 +43,29 @@ module.exports = {
         message.channel.send(new Discord.MessageEmbed()
         .setAuthor("Server Information About: " +  message.guild.name, message.guild.iconURL({
           dynamic: true
-        }), "https://clan.milrato.eu")
+        }), "https://discord.gg/G22vGgkf5B")
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-        .addField("<:arrow:832598861813776394> Owner", `${message.guild.owner.user}\n\`${message.guild.owner.user.tag}\``, true)
-        .addField("<:arrow:832598861813776394> Created On", "\`" + moment(message.guild.createdTimestamp).format("DD/MM/YYYY") + "\`\n" + "`"+ moment(message.guild.createdTimestamp).format("hh:mm:ss") +"`", true)
-        .addField("<:arrow:832598861813776394> You Joined", "\`" + moment(message.member.joinedTimestamp).format("DD/MM/YYYY") + "\`\n" + "`"+ moment(message.member.joinedTimestamp).format("hh:mm:ss") +"`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Owner", `${message.guild.owner.user}\n\`${message.guild.owner.user.tag}\``, true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Created On", "\`" + moment(message.guild.createdTimestamp).format("DD/MM/YYYY") + "\`\n" + "`"+ moment(message.guild.createdTimestamp).format("hh:mm:ss") +"`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> You Joined", "\`" + moment(message.member.joinedTimestamp).format("DD/MM/YYYY") + "\`\n" + "`"+ moment(message.member.joinedTimestamp).format("hh:mm:ss") +"`", true)
       
-        .addField("<:arrow:832598861813776394> All Channels", "👁‍🗨 \`" + message.guild.channels.cache.size + "\`", true)
-        .addField("<:arrow:832598861813776394> Text Channels", "💬 \`" + message.guild.channels.cache.filter(channel => channel.type == "text").size + "\`", true)
-        .addField("<:arrow:832598861813776394> Voice Channels", "🔈 \`" + message.guild.channels.cache.filter(channel => channel.type == "voice").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> All Channels", "👁‍🗨 \`" + message.guild.channels.cache.size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Text Channels", "💬 \`" + message.guild.channels.cache.filter(channel => channel.type == "text").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Voice Channels", "🔈 \`" + message.guild.channels.cache.filter(channel => channel.type == "voice").size + "\`", true)
        
-        .addField("<:arrow:832598861813776394> Total USERS", "😀 \`" + message.guild.memberCount + "\`", true)
-        .addField("<:arrow:832598861813776394> Total HUMANS", "👤 \`" + message.guild.members.cache.filter(member => !member.user.bot).size + "\`", true)
-        .addField("<:arrow:832598861813776394> Total BOTS", "🤖 \`" + message.guild.members.cache.filter(member => member.user.bot).size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Total USERS", "😀 \`" + message.guild.memberCount + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Total HUMANS", "👤 \`" + message.guild.members.cache.filter(member => !member.user.bot).size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Total BOTS", "🤖 \`" + message.guild.members.cache.filter(member => member.user.bot).size + "\`", true)
         
-        .addField("<:arrow:832598861813776394> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.presence.status != "offline").size + "\`", true)
-        .addField("<:arrow:832598861813776394> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.presence.status == "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.presence.status != "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.presence.status == "offline").size + "\`", true)
 
-        .addField("<:arrow:832598861813776394> Total Boosts", "<a:nitro_logo:833402717950836806> \`" + message.guild.premiumSubscriptionCount + "\`", true)
-        .addField("<:arrow:832598861813776394> Boost-Level", "<a:nitro:833402717506502707> \`" + boostlevel + "\`", true)
-        .addField("<:arrow:832598861813776394> Max-Talk-Bitrate", "👾 \`" + maxbitrate + " kbps\`", true)
+        .addField("<:Nitro:914405310465192037> Total Boosts", "<:Nitro:914405310465192037> \`" + message.guild.premiumSubscriptionCount + "\`", true)
+        .addField("<:Nitro:914405310465192037> Boost-Level", "<:Nitro:914405310465192037> \`" + boostlevel + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Max-Talk-Bitrate", "👾 \`" + maxbitrate + " kbps\`", true)
         
-        .addField(`<:arrow:832598861813776394> [${message.guild.emojis.cache.size}] Emojis: `, "> "+message.guild.emojis.cache.size < 20 ? message.guild.emojis.cache.map(emoji => `${emoji}`).join(", ") : message.guild.emojis.cache.size > 20 ? emojitrimarray(message.guild.emojis.cache.map(emoji => `${emoji}`)).substr(0, 1024) : 'No Emojis')
-        .addField(`<:arrow:832598861813776394> [${message.guild.roles.cache.size}] Roles: `, "> "+message.guild.roles.cache.size < 25 ? message.guild.roles.cache.array().sort((a, b) => b.rawPosition - a.rawPosition).map(role => `<@&${role.id}>`).join(', ') : message.guild.roles.cache.size > 25 ? trimArray(message.guild.roles.cache) : 'None')
+        .addField(`<:RGBARROWRIGHT:914738789681885214> [${message.guild.emojis.cache.size}] Emojis: `, "> "+message.guild.emojis.cache.size < 20 ? message.guild.emojis.cache.map(emoji => `${emoji}`).join(", ") : message.guild.emojis.cache.size > 20 ? emojitrimarray(message.guild.emojis.cache.map(emoji => `${emoji}`)).substr(0, 1024) : 'No Emojis')
+        .addField(`<:RGBARROWRIGHT:914738789681885214> [${message.guild.roles.cache.size}] Roles: `, "> "+message.guild.roles.cache.size < 25 ? message.guild.roles.cache.array().sort((a, b) => b.rawPosition - a.rawPosition).map(role => `<@&${role.id}>`).join(', ') : message.guild.roles.cache.size > 25 ? trimArray(message.guild.roles.cache) : 'None')
         .setThumbnail(message.guild.iconURL({
           dynamic: true
         }))
@@ -78,7 +78,7 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> ERROR | An error occurred`)
+        .setTitle(`<:RedNope:914312373890854922> ERROR | An error occurred`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       );
     }

@@ -118,7 +118,7 @@ module.exports = {
                   });
                 } catch (e) {
                   return message.reply({embed: new Discord.MessageEmbed()
-                    .setTitle("ERROR | Something went wrong, please contact: `NotMichx#6969`")
+                    .setTitle("ERROR | Something went wrong, please contact: `CEO│Eul Joromat#0923`")
                     .setColor(es.wrongcolor)
                     .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                     .setFooter(es.footertext, es.footericon)
@@ -150,7 +150,7 @@ module.exports = {
           return message.reply({embed: embed});
         } else {
         return message.reply({embed: new MessageEmbed()
-          .setTitle("ERROR | PLEASE CONTACT `NotMichx#6969`")
+          .setTitle("ERROR | PLEASE CONTACT `CEO│Eul Joromat#0923`")
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
         });

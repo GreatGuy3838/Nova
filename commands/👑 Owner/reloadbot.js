@@ -22,7 +22,7 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> You are not allowed to run this Command`)
+        .setTitle(`<:RedNope:914312373890854922> You are not allowed to run this Command`)
         .setDescription(`You need to be one of those guys: ${config.ownerIDS.map(id => `<@${id}>`)}`)
       );
     try {

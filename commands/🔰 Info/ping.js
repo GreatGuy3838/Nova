@@ -18,12 +18,12 @@ module.exports = {
       message.channel.send(new MessageEmbed()
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`${emoji.msg.ping} Pinging....`)
+        .setTitle(`<:9kPing:913760165604495410> Pinging....`)
       ).then(msg => {
         msg.edit({embed: new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
           .setFooter(es.footertext, es.footericon)
-          .setTitle(`${emoji.msg.ping} Ping: \`${Math.round(Date.now() -date1)}ms\`\n\n${emoji.msg.ping} Api Latency: \`${Math.round(client.ws.ping)}ms\``)
+          .setTitle(`<:9kPing:913760165604495410> Ping: \`${Math.round(Date.now() -date1)}ms\`\n\n<:9kPing:913760165604495410> Api Latency: \`${Math.round(client.ws.ping)}ms\``)
         });
       })
     } catch (e) {
@@ -36,12 +36,3 @@ module.exports = {
     }
   }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

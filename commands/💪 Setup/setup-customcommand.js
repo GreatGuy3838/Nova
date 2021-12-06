@@ -17,7 +17,7 @@ module.exports = {
   cooldown: 5,
   usage: "setup-customcommand  --> Follow the Steps",
   description: "Define Custom Commands, Create Custom Commands and Remove Custom Commands --> \"Custom Command Names, that sends Custom Messages\"",
-  memberpermissions: ["ADMINISTRATOR"],
+  memberpermissions: [""],
   run: async (client, message, args, cmduser, text, prefix) => {
     var es = client.settings.get(message.guild.id, "embed")
     try {
@@ -45,7 +45,7 @@ module.exports = {
         tempmsg.react("📑");
       } catch (e) {
         return message.reply(new Discord.MessageEmbed()
-          .setTitle("<:no:833101993668771842> Missing Permission to add Reactions")
+          .setTitle("❌ Missing Permission to add Reactions")
           .setColor(es.wrongcolor)
           .setDescription(`\`\`\`${String(e.message ? e.message : e).substr(0, 2000)}\`\`\``.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -70,7 +70,7 @@ module.exports = {
         })
       if (timeouterror)
         return message.reply(new Discord.MessageEmbed()
-          .setTitle("<:no:833101993668771842> Your Time ran out")
+          .setTitle("❌ Your Time ran out")
           .setColor(es.wrongcolor)
           .setDescription(`Cancelled the Operation!`.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -80,7 +80,7 @@ module.exports = {
       if (temptype == "add") {
         if(client.customcommands.get(message.guild.id, "commands").length > 19)
           return message.reply(new Discord.MessageEmbed()
-            .setTitle("<:no:833101993668771842> You've reached the maximum Custom Commands Amount!")
+            .setTitle("❌ You've reached the maximum Custom Commands Amount!")
             .setColor(es.wrongcolor)
             .setDescription(`You cannot have more then **20** Custom Commands`.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -107,7 +107,7 @@ module.exports = {
               tempmsg = await message.channel.send(new Discord.MessageEmbed()
                 .setTitle("What Should the Custom Command send?")
                 .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-                .setDescription(`Please just type the content in the Chat\nExample: \`Discord Server: https://discord.gg/FQGXbypRf8\``)
+                .setDescription(`Please just type the content in the Chat\nExample: \`Discord Server: https://discord.gg/zwBRBu7WHW\``)
                 .setFooter(es.footertext, es.footericon)
               )
               await tempmsg.channel.awaitMessages(m => m.author.id === message.author.id, {
@@ -174,7 +174,7 @@ module.exports = {
                         })
                       if (timeouterror)
                         return message.reply(new Discord.MessageEmbed()
-                          .setTitle("<:no:833101993668771842> Your Time ran out")
+                          .setTitle("❌ Your Time ran out")
                           .setColor(es.wrongcolor)
                           .setDescription(`Cancelled the Operation!`.substr(0, 2000))
                           .setFooter(es.footertext, es.footericon)
@@ -189,7 +189,7 @@ module.exports = {
                 })
               if (timeouterror)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> Your Time ran out")
+                  .setTitle("❌ Your Time ran out")
                   .setColor(es.wrongcolor)
                   .setDescription(`Cancelled the Operation!`.substr(0, 2000))
                   .setFooter(es.footertext, es.footericon)
@@ -205,7 +205,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply(new Discord.MessageEmbed()
-            .setTitle("<:no:833101993668771842> Your Time ran out")
+            .setTitle("❌ Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`Cancelled the Operation!`.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -264,7 +264,7 @@ module.exports = {
                 );
               } catch (e) {
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("❌ Something went wrong, please contact: `BROKARONAGAMING#9999`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(e.message ? e.message : e).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -279,7 +279,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply(new Discord.MessageEmbed()
-            .setTitle("<:no:833101993668771842> Your Time ran out")
+            .setTitle("❌ Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`Cancelled the Operation!`.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -321,7 +321,7 @@ module.exports = {
         tempmsg = await tempmsg.edit({embed: embed})
       } else {
         return message.reply(new Discord.MessageEmbed()
-          .setTitle("<:no:833101993668771842> PLEASE CONTACT `Tomato#6966`")
+          .setTitle("❌ PLEASE CONTACT `Tomato#6966`")
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
         );
@@ -331,18 +331,9 @@ module.exports = {
       console.log(String(e.stack).bgRed)
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> Something went Wrong`)
+        .setTitle(`❌ Something went Wrong`)
         .setDescription(`\`\`\`${String(e.message ? e.message : e).substr(0, 2000)}\`\`\``)
       );
     }
   },
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

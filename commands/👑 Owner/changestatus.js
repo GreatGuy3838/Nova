@@ -48,7 +48,7 @@ module.exports = {
         tempmsg.react("🟢")
       } catch (e) {
         return message.reply({embed: new MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | Missing Permissions to add Reactions")
+          .setTitle("<:RedNope:914312373890854922> ERROR | Missing Permissions to add Reactions")
           .setColor(es.wrongcolor)
           .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -74,7 +74,7 @@ module.exports = {
         })
       if (timeouterror)
         return message.reply({embed: new MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+          .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
           .setColor(es.wrongcolor)
           .setDescription(`\`\`\`${String(JSON.stringify(timeouterror)).substr(0, 2000)}\`\`\``.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -123,7 +123,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply({embed: new MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`\`\`\`${String(JSON.stringify(timeouterror)).substr(0, 2000)}\`\`\``.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -173,7 +173,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply({embed: new MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`\`\`\`${String(JSON.stringify(timeouterror)).substr(0, 2000)}\`\`\``.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -263,7 +263,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply({embed: new MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`\`\`\`${String(JSON.stringify(timeouterror)).substr(0, 2000)}\`\`\``.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -289,13 +289,13 @@ module.exports = {
               return message.channel.send({embed: new MessageEmbed()
                 .setFooter(es.footertext, es.footericon)
                 .setColor(es.wrongcolor)
-                .setTitle(`<:no:833101993668771842> NOT A VALID URL`)
+                .setTitle(`<:RedNope:914312373890854922> NOT A VALID URL`)
               })
             if (!msg.includes("twitch"))
               return message.channel.send({embed: new MessageEmbed()
                 .setFooter(es.footertext, es.footericon)
                 .setColor(es.wrongcolor)
-                .setTitle(`<:no:833101993668771842> NOT A VALID TWITCH URL`)
+                .setTitle(`<:RedNope:914312373890854922> NOT A VALID TWITCH URL`)
               })
             let status = config
             status.status.url = msg;
@@ -324,7 +324,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply({embed: new MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`\`\`\`${String(JSON.stringify(timeouterror)).substr(0, 2000)}\`\`\``.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -332,7 +332,7 @@ module.exports = {
 
       } else {
         return message.reply({embed: new MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | PLEASE CONTACT `Tomato#6966`")
+          .setTitle("<:RedNope:914312373890854922> ERROR | PLEASE CONTACT `CEO│Eul Joromat#0923`")
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
         });
@@ -342,7 +342,7 @@ module.exports = {
       console.log(String(e.stack).bgRed)
       return message.channel.send({embed: new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> Something went Wrong`)
+        .setTitle(`<:RedNope:914312373890854922> Something went Wrong`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       });
     }

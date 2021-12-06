@@ -19,9 +19,7 @@ module.exports = {
   run: async (client, message, args, cmduser, text, prefix) => {
     var es = client.settings.get(message.guild.id, "embed");
     try {
-      const emojis = [
-        "🚫", "🔨", "🅰️", "🅱️", "🔗", "📩", "🛠", "📘", "⚙️", "💯", "👍", "🔈", "🆗", "📤", "💥", "📻", "🔱", "📌", "📯", "📑", "💡", "🏷", "840260133753061408", "840255600851812393", "📥"
-      ];
+      const emojis = "";
       var items = client.commands.filter((cmd) => cmd.category.toLowerCase().includes("setup")).map((cmd) => `\`${cmd.name}\``);
       var items2 = client.commands.filter((cmd) => cmd.category.toLowerCase().includes("setup")).map((cmd) => `*${cmd.description}*`);
 
@@ -36,10 +34,10 @@ module.exports = {
 
 
       for(let i = 0; i < 20; i++){
-        embed.addField(`${emojis[i] ? emojis[i].length == 18 ? `${emojistring(client.guilds.cache.get("773668217163218944").emojis.cache.find(emoji => emoji.id === emojis[i]))}`: emojis[i] + " " : ""}`+ items[i], items2[i], true);
+        embed.addField(`${emojis[i] ? emojis[i].length == 18 ? `${emojistring(client.guilds.cache.get("862914514571886633").emojis.cache.find(emoji => emoji.id === emojis[i]))}`: emojis[i] + " " : ""}`+ items[i], items2[i], true);
       }
       for(let i = 20; i < items.length; i++){
-        embed2.addField(`${emojis[i] ? emojis[i].length == 18 ? `${emojistring(client.guilds.cache.get("773668217163218944").emojis.cache.find(emoji => emoji.id === emojis[i]))}`: emojis[i] + " " : ""}`+ items[i], items2[i], true);
+        embed2.addField(`${emojis[i] ? emojis[i].length == 18 ? `${emojistring(client.guilds.cache.get("862914514571886633").emojis.cache.find(emoji => emoji.id === emojis[i]))}`: emojis[i] + " " : ""}`+ items[i], items2[i], true);
       } 
       function emojistring(emoji){
         if(!emoji || !emoji.id) return "";
@@ -83,7 +81,7 @@ module.exports = {
         if(!error) {
           error = true;
           return message.reply(new Discord.MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("❌ ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`Cancelled the Operation!`.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -101,7 +99,7 @@ module.exports = {
         if(!error) {
           error = true;
           return message.reply(new Discord.MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("❌ ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`Cancelled the Operation!`.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -112,18 +110,9 @@ module.exports = {
       console.log(String(e.stack).bgRed)
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> Something went Wrong`)
+        .setTitle(`❌ Something went Wrong`)
         .setDescription(`\`\`\`${String(JSON.stringify(e, null, 2)).substr(0, 2000)}\`\`\``)
       );
     }
   },
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

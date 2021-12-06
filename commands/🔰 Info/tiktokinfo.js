@@ -21,7 +21,7 @@ module.exports = {
             const posts = await TikTokScraper.user(args.join(" "), {
                 number: 5,
             });
-            if(!posts.collector[0]) return message.reply("<:no:833101993668771842> NOT FOUND / No Posts!") 
+            if(!posts.collector[0]) return message.reply("<:RedNope:914312373890854922> **NOT FOUND / No Posts!**") 
             author = posts.collector[0].authorMeta;
             var embed = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
@@ -94,12 +94,3 @@ module.exports = {
     return;
   }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

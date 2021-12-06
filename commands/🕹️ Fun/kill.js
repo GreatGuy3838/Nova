@@ -1,59 +1,35 @@
-const {
-  MessageEmbed
-} = require("discord.js");
 const config = require("../../botconfig/config.json");
 var ee = require("../../botconfig/embed.json");
 const emoji = require(`../../botconfig/emojis.json`);
-const Discord = require(`discord.js`);
-const canvacord = require("canvacord");
-const path = require("path");
-const { GetUser } = require("../../handlers/functions")
+const Discord = require("discord.js");
+const fetch = require('node-fetch');
+const kill = [
+    'https://media.giphy.com/media/PnhOSPReBR4F5NT5so/giphy.gif',
+    'https://cdn.zerotwo.dev/SHOOT/028bfc32-c06b-4295-87a5-7ddaef08d5ef.gif',
+    'https://cdn.zerotwo.dev/SHOOT/91f5ec6a-3857-4e13-b5d0-482ccf8e4a75.gif',
+    'https://media.giphy.com/media/QHYHhShm1sjVS/giphy.gif',
+    'https://media.giphy.com/media/uTCAwWNtz7U2c/giphy.gif',
+    'https://media.giphy.com/media/dEXC4BdZf1dMA/giphy.gif',
+    'https://media.giphy.com/media/gFPhbYRr8G7Bdh9bJB/giphy.gif',
+    'https://media.giphy.com/media/otRxOGlWgI9hu/giphy.gif',
+    'https://media.giphy.com/media/UcNaNsFk5jLSytk40R/giphy.gif',
+    'https://media.giphy.com/media/AaThTI6tAkJcgZylgw/giphy.gif',
+    'https://media.giphy.com/media/FDouUdQnZa3WPyTJDX/giphy.gif',
+    'https://media.giphy.com/media/UVqjBMIG79utCWIR5j/giphy.gif',
+    'https://media.giphy.com/media/3oz8xrsmRyy8uTeUk8/giphy.gif'
+];
 module.exports = {
-  name: path.parse(__filename).name,
+  name: "kill",
   category: "🕹️ Fun",
-  useage: `${path.parse(__filename).name}[@User]`,
-  description: "*Image cmd in the style:* " + path.parse(__filename).name,
+  usage: "kill",
+  description: "kill user",
   run: async (client, message, args, cmduser, text, prefix) => {
-    let es = client.settings.get(message.guild.id, "embed")
-        if(!client.settings.get(message.guild.id, "FUN")){
-          return message.channel.send(new MessageEmbed()
-            .setColor(es.wrongcolor)
-            .setFooter(es.footertext, es.footericon)
-            .setTitle(`<:no:833101993668771842> THIS COMMAND IS CURRENTLY DISABLED`)
-            .setDescription(`An Admin can enable it with: \`${prefix}setup-commands\``)
-          );
-        }
-    try {
-      //find the USER
-      var user;
-      try{
-        user = await GetUser(message, args)
-      }catch (e){
-        return message.reply(e)
-      }
-      message.channel.send(new MessageEmbed()
-        .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-        .setFooter(es.footertext, es.footericon)
-        .setDescription(`${message.author} kills ${user} ${args.slice(1).join(" ")}`)
-        .setImage("https://cdn.zerotwo.dev/SHOOT/028bfc32-c06b-4295-87a5-7ddaef08d5ef.gif")
-      );
-    } catch (e) {
-      console.log(String(e.stack).bgRed)
-      return message.channel.send(new MessageEmbed()
-        .setColor(es.wrongcolor)
-        .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> An error occurred`)
-        .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
-      );
-    }
-  },
-};
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */
+        //code
+   const user = message.mentions.users.first();
+        if (!user) return message.channel.send('Oh oh... you gotta provide a valid user to Kill :/');
+        return message.channel.send(new Discord.MessageEmbed()
+            .setColor('RANDOM')
+            .setImage(kill[Math.floor(Math.random() * kill.length)])
+            .setDescription(`${message.author.username} Kill ${user.username}!`)
+        );
+    }}

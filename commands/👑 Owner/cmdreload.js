@@ -48,19 +48,19 @@ module.exports = {
         return message.channel.send(new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
-          .setTitle(`<:no:833101993668771842> Could not find: \`${args[0]}\``)
+          .setTitle(`<:RedNope:914312373890854922> Could not find: \`${args[0]}\``)
         );
       }
       if (reload)
         return message.channel.send(new MessageEmbed()
           .setColor(es.color)
           .setFooter(es.footertext, es.footericon)
-          .setTitle(`<a:yes:833101995723194437> Reloaded \`${args[0]}\``)
+          .setTitle(`<:GreenCheck:914034845112479774> Reloaded \`${args[0]}\``)
         );
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> Could not reload: \`${args[0]}\``)
+        .setTitle(`<:RedNope:914312373890854922> Could not reload: \`${args[0]}\``)
       );
     } catch (e) {
       console.log(String(e.stack).bgRed)

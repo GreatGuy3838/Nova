@@ -22,7 +22,7 @@ module.exports = {
     if (!config.ownerIDS.some(r => r.includes(message.author.id)))
       return message.channel.send({embed: new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> You are not allowed to run this Command`)
+        .setTitle(`<:RedNope:914312373890854922> You are not allowed to run this Command`)
         .setDescription(`You need to be one of those guys: ${config.ownerIDS.map(id => `<@${id}>`)}`)
       });
     try {
@@ -45,7 +45,7 @@ module.exports = {
         tempmsg.react("📑")
       } catch (e) {
         return message.reply({embed: new MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | Missing Permissions to add Reactions")
+          .setTitle("<:RedNope:914312373890854922> ERROR | Missing Permissions to add Reactions")
           .setColor(es.wrongcolor)
           .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -69,7 +69,7 @@ module.exports = {
         })
       if (timeouterror)
         return message.reply({embed: new MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+          .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
           .setColor(es.wrongcolor)
           .setDescription(`\`\`\`${String(JSON.stringify(timeouterror)).substr(0, 2000)}\`\`\``.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -80,14 +80,14 @@ module.exports = {
         if (temptype == "toggle") {
           client.adenabled = !client.adenabled;
           return message.reply(new Discord.MessageEmbed()
-            .setTitle(`<a:yes:833101995723194437> The Bero-Host Advertisement System is now ${d2p(client.adenabled)}!`)
+            .setTitle(`<:GreenCheck:914034845112479774> The MYTHIC-Host Advertisement System is now ${d2p(client.adenabled)}!`)
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setFooter(es.footertext, es.footericon)
           );
         } else if (temptype == "thesettings") {
           
           var embed = new MessageEmbed()
-          .setTitle(`📑 Settings of the Bero-Host Advertisement System`)
+          .setTitle(`📑 Settings of the MYTHIC-Host Advertisement System`)
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
           .setDescription(`It is on: ${d2p(client.adenabled)}\n\n*On every Bot Restart, it will be enabled again*`.substr(0, 2048))
           .setFooter(es.footertext, es.footericon)
@@ -95,7 +95,7 @@ module.exports = {
           return message.reply({embed: embed});
         } else {
         return message.reply({embed: new MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | PLEASE CONTACT `Tomato#6966`")
+          .setTitle("<:RedNope:914312373890854922> ERROR | PLEASE CONTACT `CEO│Eul Joromat#0923`")
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
         });
@@ -105,7 +105,7 @@ module.exports = {
       console.log(String(e.stack).bgRed)
       return message.channel.send({embed: new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> Something went Wrong`)
+        .setTitle(`<:RedNope:914312373890854922> Something went Wrong`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       });
     }

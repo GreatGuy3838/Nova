@@ -1,4 +1,3 @@
-
 const request = require('request'),
  Discord = require('discord.js'),
  CronJob = require('cron').CronJob,

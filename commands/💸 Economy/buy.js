@@ -15,7 +15,7 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> THIS COMMAND IS CURRENTLY DISABLED`)
+        .setTitle(`<a:Deny:863000078690811905> THIS COMMAND IS CURRENTLY DISABLED`)
         .setDescription(`An Admin can enable it with: \`${prefix}setup-commands\``)
       );
     }
@@ -23,7 +23,7 @@ module.exports = {
       //command
       var user = message.author;
       //if the user is a bot, then return
-      if (user.bot) return message.reply("<:no:833101993668771842> **A Discord Bot can not have Economy!**")
+      if (user.bot) return message.reply("<a:Deny:863000078690811905> **A Discord Bot can not have Economy!**")
       //ensure the economy data
       ensure_economy_user(client, message.guild.id, user.id)
       //get the latest data

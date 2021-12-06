@@ -37,7 +37,7 @@ module.exports = {
           client.user.setAvatar(`./image.jpg`)
           .then(user => {
             return message.channel.send(new MessageEmbed()
-            .setTitle(`<a:yes:833101995723194437> Successfully, changed the Bot avatar!`)
+            .setTitle(`<:GreenCheck:914034845112479774> Successfully, changed the Bot avatar!`)
             .setColor(es.color)
             .setFooter(es.footertext, es.footericon)
           );

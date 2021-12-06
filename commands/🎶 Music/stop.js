@@ -47,6 +47,8 @@ module.exports = {
       //send success message
       return message.channel.send(new MessageEmbed()
         .setTitle(`<a:yes:833101995723194437> ${emoji.msg.stop} Stopped and left your Channel`)
+        .addField("Thank you for using our service!",`Come join our [support server](https://discord.gg/NfAbJB7ft9) to get information about updates, issues and for discussions about bot features!`)
+        .setImage("https://cdn.discordapp.com/attachments/875692237751742474/880633325235085363/standard_1.gif")
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
         .setFooter(es.footertext, es.footericon)
       );
@@ -61,12 +63,3 @@ module.exports = {
     }
   }
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

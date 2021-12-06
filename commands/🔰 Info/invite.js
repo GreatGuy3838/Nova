@@ -14,16 +14,18 @@ module.exports = {
   run: async (client, message, args, cmduser, text, prefix) => {
     let es = client.settings.get(message.guild.id, "embed")
     try {
-      let button_support_dc = new MessageButton().setStyle('url').setLabel('Support Server').setURL("https://discord.com/invite/FQGXbypRf8")
-      let button_invite = new MessageButton().setStyle('url').setLabel('Invite this Bot').setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
+      let button_support_dc = new MessageButton().setStyle('url').setLabel('Support Server').setURL("https://discord.gg/G22vGgkf5B")
+      let button_invite = new MessageButton().setStyle('url').setLabel('Invite this Bot').setURL(`https://discord.com/api/oauth2/authorize?client_id=797643112302247967&permissions=8&scope=bot`)
       //array of all buttons
-      const allbuttons = [button_public_invite, button_support_dc, button_invite]
-      message.channel.send({
-        embed: new MessageEmbed()
+      const allbuttons = [button_support_dc, button_invite]
+       message.channel.send({
+         embed: new MessageEmbed()
           .setColor(ee.color)
-          .setTitle("Thanks for inviting Luna Services")
-          .addField(`Bot Powered by Luna`, `**[Invite Public Bot](https://discord.com/api/oauth2/authorize?client_id=784364932149280778&permissions=8&scope=bot)  •  [Support Server/Get your Own Bot](https://discord.com/invite/FQGXbypRf8)**\n\n[*Invite* **${client.user.username}**](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
-          .setFooter("Luna Services | powered by Luna", "https://media.discordapp.net/attachments/845646789020745738/856873122862727208/standard.gif?width=351&height=45"),
+          .setTitle("Thanks for inviting MYTHICBot")
+          .addField(`MYTHICBot Powered by CEO│Eul Joromat#0923`, `**[Invite Public Bot](https://discord.com/api/oauth2/authorize?client_id=797643112302247967&permissions=8&scope=bot)  •  [Support Server](https://discord.gg/G22vGgkf5B)
+          **\n\n[**Invite** **${client.user.username}**](https://discord.com/api/oauth2/authorize?client_id=797643112302247967&permissions=8&scope=bot)`)
+          .setImage("https://share.creavite.co/GqxQErItvpLyPHWi.gif")
+          .setFooter("MYTHIC Security Bot | powered by CEO│Eul Joromat#0923", "https://cdn.discordapp.com/attachments/880336519305523210/880632358364127254/2Q.png"),
         buttons: allbuttons
       });
     } catch (e) {

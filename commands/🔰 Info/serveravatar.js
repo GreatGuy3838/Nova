@@ -14,11 +14,11 @@ module.exports = {
     let es = client.settings.get(message.guild.id, "embed")
     try {
       message.channel.send(new Discord.MessageEmbed()
-      .setAuthor(`Avatar from: ${message.guild.name}`, message.guild.iconURL({dynamic: true}), "https://discord.gg/FQGXbypRf8")
+      .setAuthor(`Avatar from: ${message.guild.name}`, message.guild.iconURL({dynamic: true}), "https://discord.gg/G22vGgkf5B")
       .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-      .addField("<:arrow:832598861813776394> PNG",`[\`LINK\`](${message.guild.iconURL({format: "png"})})`, true)
-      .addField("<:arrow:832598861813776394> JPEG",`[\`LINK\`](${message.guild.iconURL({format: "jpg"})})`, true)
-      .addField("<:arrow:832598861813776394> WEBP",`[\`LINK\`](${message.guild.iconURL({format: "webp"})})`, true)
+      .addField("<:RGBARROWRIGHT:914738789681885214> PNG",`[\`LINK\`](${message.guild.iconURL({format: "png"})})`, true)
+      .addField("<:RGBARROWRIGHT:914738789681885214> JPEG",`[\`LINK\`](${message.guild.iconURL({format: "jpg"})})`, true)
+      .addField("<:RGBARROWRIGHT:914738789681885214> WEBP",`[\`LINK\`](${message.guild.iconURL({format: "webp"})})`, true)
       .setURL(message.guild.iconURL({
         dynamic: true
       }))
@@ -32,7 +32,7 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> ERROR | An error occurred`)
+        .setTitle(`<:RedNope:914312373890854922> ERROR | An error occurred`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       );
     }

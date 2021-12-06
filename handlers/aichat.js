@@ -20,7 +20,7 @@ module.exports = client => {
             if(message.channel.id == chatbot){
               if(message.attachments.size > 0)
               {
-                  const attachment = new MessageAttachment("https://cdn.discordapp.com/attachments/816645188461264896/826736269509525524/I_CANNOT_READ_FILES.png")
+                  const attachment = new MessageAttachment("https://cdn.discordapp.com/attachments/863783680844496896/875688311807676486/standard.gif")
                   return message.channel.send(attachment)
               }
               fetch(`http://api.brainshop.ai/get?bid=153861&key=0ZjvbPWKAxJvcJ96&uid=1&msg=${encodeURIComponent(message)}`)

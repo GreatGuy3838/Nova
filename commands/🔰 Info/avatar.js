@@ -26,7 +26,7 @@ module.exports = {
         return message.reply(e)
       }
       message.channel.send(new Discord.MessageEmbed()
-        .setAuthor(`Avatar from: ${user.tag}`, user.displayAvatarURL({dynamic: true}), "https://discord.gg/FQGXbypRf8")
+        .setAuthor(`Avatar from: ${user.tag}`, user.displayAvatarURL({dynamic: true}), "https://discord.gg/ve7z9K4QXV")
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
         .addField("<:arrow:832598861813776394> PNG",`[\`LINK\`](${user.displayAvatarURL({format: "png"})})`, true)
         .addField("<:arrow:832598861813776394> JPEG",`[\`LINK\`](${user.displayAvatarURL({format: "jpg"})})`, true)

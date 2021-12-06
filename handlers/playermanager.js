@@ -52,15 +52,6 @@ module.exports = async (client, message, args, type) => {
     return message.channel.send(new MessageEmbed()
       .setColor(ee.wrongcolor)
       .setFooter(ee.footertext, ee.footericon)
-      .setTitle("<:no:833101993668771842> No valid search Term? ... Please Contact: `Tomato#6966`")
+      .setTitle("<:no:833101993668771842> No valid search Term? ... Please Contact: `BROKARONAGAMING#9999`")
     );
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

@@ -1,27 +1,28 @@
 {
-   "token": "ODYyOTE0NjEzODA4MDcwNjg2.YOfR3A.I7UyS0jn5eWAuwNP6bWtmecjW30",
-   "prefix": "?",
+  "google" : "AIzaSyDFriQGrX5SrCLAwm2Y5kB7s-2zwjSujmA",
+   "prefix": "s!",
+   "prefixes": ["s!", "s!", "s!", "s!"],
    "ownerIDS": [
-      "745581095747059722"
+      "757243549774381099"
    ],
    "status": {
-      "text": "?help | Underdevelopment",
-      "type": "PLAYING",
+      "text": "s!help | s!play",
+      "type": "STREAMING",
       "COMMENT:": "TYPES ARE: PLAYING, STREAMING, WATCHING, LISTENING",
-      "url": "https://discord.gg/sakshyam"
+      "url": "https://www.twitch.tv/ceo_mythic"
    },
    "clientsettings": {
       "nodes": [
          {
-            "host": "localhost",
+            "host": "lavalinknl.ml",
             "port": 2333,
-            "password": "youshallnotpass"
+            "password": "Raccoon"
          }
       ]
    },
    "spotify": {
-      "clientSecret": "1b5aedea6eb04358aaebee7d76047f80",
-      "clientID": "b458566df412473d800daacdd5937e8f"
+      "clientSecret": "rf7Jy_dnfxQR9lUT8Ke72DyeiedCP25h",
+      "clientID": "797643112302247967"
    },
    "settings": {
       "COMMENT": "time_delay 0 === insta leave",
@@ -40,7 +41,7 @@
       "COMMENT": "my suggestion is to use ksoft_api on true and paste in the api key u can sign up, until u get the key use lyrics_finder which is way weaker but better the nothing",
       "ksoft_api": {
          "use_this_instead": true,
-         "api_key": "FILL IN"
+         "api_key": "AIzaSyAVph-V_duKCbh-yOqPvvfmeRGqVQ8SkkY"
       }
    }
 }

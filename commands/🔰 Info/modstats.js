@@ -32,7 +32,7 @@ module.exports = {
       }else{
         user = message.author;
       }
-      if(!user || user == null || user.id == null || !user.id) return message.reply("<:no:833101993668771842> Could not find the USER")
+      if(!user || user == null || user.id == null || !user.id) return message.reply("<:RedNope:914312373890854922> Could not find the USER")
 
       client.stats.ensure(message.guild.id + user.id, {
         ban: [],
@@ -74,7 +74,7 @@ module.exports = {
       console.log(String(e.stack).bgRed)
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> An error occurred`)
+        .setTitle(`<:RedNope:914312373890854922> An error occurred`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr([], 2000)}\`\`\``)
       );
     }

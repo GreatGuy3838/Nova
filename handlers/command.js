@@ -4,7 +4,7 @@ const {
 const ascii = require("ascii-table");
 let table = new ascii("");
 table.setHeading("Command", "Load status");
-console.log("Welcome to SERVICE HANDLER /--/ By https://milrato.eu /--/ Discord: Tomato#6966".yellow);
+console.log("Welcome to SERVICE HANDLER /--/ By BROKARONAGAMING /--/ Discord: BROKARONAGAMING#9999".blue);
 module.exports = (client) => {
   try {
     readdirSync("./commands/").forEach((dir) => {
@@ -63,12 +63,3 @@ module.exports = (client) => {
   // We now have a giveawaysManager property to access the manager everywhere!
   client.giveawaysManager = manager;
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

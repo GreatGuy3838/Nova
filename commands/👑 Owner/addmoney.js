@@ -15,14 +15,14 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> You are not allowed to run this Command`)
+        .setTitle(`<:RedNope:914312373890854922> You are not allowed to run this Command`)
         .setDescription(`You need to be one of those guys: ${config.ownerIDS.map(id => `<@${id}>`)}`)
       );
     if(!client.settings.get(message.guild.id, "ECONOMY")){
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> THIS COMMAND IS CURRENTLY DISABLED`)
+        .setTitle(`<:RedNope:914312373890854922> THIS COMMAND IS CURRENTLY DISABLED`)
         .setDescription(`An Admin can enable it with: \`${prefix}setup-commands\``)
       );
     }
@@ -34,8 +34,8 @@ module.exports = {
     return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(user.tag, user.displayAvatarURL({dynamic: true}))
-        .setTitle(`<:no:833101993668771842> You didn't pinged to whom you want to pay`)
-        .setDescription(`Usage: \`${prefix}addmoney <@USER> <Amount>\`\n\n\Example: \`${prefix}addmoney <@442355791412854784> 42069\``)
+        .setTitle(`<:RedNope:914312373890854922> You didn't pinged to whom you want to pay`)
+        .setDescription(`Usage: \`${prefix}addmoney <@USER> <Amount>\`\n\n\Example: \`${prefix}addmoney <@757243549774381099> 42069\``)
       );
     topay = topay.user;
     let payamount = Number(args[1]);
@@ -43,10 +43,10 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(user.tag, user.displayAvatarURL({dynamic: true}))
-        .setTitle(`<:no:833101993668771842> You didn't add the payamount`)
+        .setTitle(`<:RedNope:914312373890854922> You didn't add the payamount`)
         .setDescription(`Usage: \`${prefix}addmoney <@USER> <Amount>\`\n\n\Example: \`${prefix}addmoney <@442355791412854784> 42069\``)
       );
-    if(user.bot || topay.bot) return message.reply("<:no:833101993668771842> **A Discord Bot can not have Economy!**")
+    if(user.bot || topay.bot) return message.reply("<:RedNope:914312373890854922> **A Discord Bot can not have Economy!**")
     client.economy.ensure(`${message.guild.id}-${user.id}`, {
       user: user.id,
       work: 0,
@@ -88,7 +88,7 @@ module.exports = {
     return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(user.tag, user.displayAvatarURL({dynamic: true}))
-        .setTitle(`<:no:833101993668771842> You can't add a negative Amount of Money or no Money, to ${topay}`)
+        .setTitle(`<:RedNope:914312373890854922> You can't add a negative Amount of Money or no Money, to ${topay}`)
       );
     
   
@@ -98,7 +98,7 @@ module.exports = {
     return message.reply(new MessageEmbed()
       .setColor(es.color)
       .setFooter(user.tag, user.displayAvatarURL({dynamic: true}))
-      .setTitle(`<a:yes:833101995723194437> **You added \`${payamount} 💸\` to \`${topay.tag}\`**`)
+      .setTitle(`<:GreenCheck:914034845112479774>  **You added \`${payamount} 💸\` to \`${topay.tag}\`**`)
       .setDescription(`👛 **${topay.username}** now has \`${Math.floor(data2.balance)} 💸\` in his/her Pocket`)
     );
   } catch (e) {
@@ -106,7 +106,7 @@ module.exports = {
     return message.channel.send(new MessageEmbed()
       .setColor(es.wrongcolor)
       .setFooter(es.footertext, es.footericon)
-      .setTitle(`<:no:833101993668771842> An error occurred`)
+      .setTitle(`<:RedNope:914312373890854922> An error occurred`)
       .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
     );
   }

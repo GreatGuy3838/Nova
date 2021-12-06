@@ -63,7 +63,7 @@ module.exports = {
         tempmsg.react("8️⃣")
       } catch (e) {
         return message.reply(new Discord.MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | Missing Permissions to add Reactions")
+          .setTitle("<:RedNope:914312373890854922> ERROR | Missing Permissions to add Reactions")
           .setColor(es.wrongcolor)
           .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -93,7 +93,7 @@ module.exports = {
         })
       if (timeouterror)
         return message.reply(new Discord.MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+          .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
           .setColor(es.wrongcolor)
           .setDescription(`Cancelled the Operation!`.substr(0, 2000))
           .setFooter(es.footertext, es.footericon)
@@ -102,10 +102,10 @@ module.exports = {
       /**
             suggest: {
               channel: "",
-              approvemsg: `<a:yes:833101995723194437> Accepted Idea! Expect this soon.`,
-              denymsg: `<:no:833101993668771842> Thank you for the feedback, but we are not interested in this idea at this time.`,
+              approvemsg: `<:GreenCheck:914034845112479774> Accepted Idea! Expect this soon.`,
+              denymsg: `<:RedNope:914312373890854922> Thank you for the feedback, but we are not interested in this idea at this time.`,
               maybemsg: `💡 We are thinking about this idea!`,
-              statustext: `<a:Loading:833101350623117342> Waiting for Community Feedback, please vote!`,
+              statustext: `<:netherportal:913984497807138847> Waiting for Community Feedback, please vote!`,
               footertext: `Want to suggest / Feedback something? Simply type in this channel!`,
               approveemoji: `833101995723194437`,
               denyemoji: `833101993668771842`,
@@ -131,7 +131,7 @@ module.exports = {
               try {
                 client.settings.set(message.guild.id, channel.id, `suggest.channel`);
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle(`<a:yes:833101995723194437> The Channel: \`${channel.name}\` is now registered as the Suggestion Channel`)
+                  .setTitle(`<:GreenCheck:914034845112479774> The Channel: \`${channel.name}\` is now registered as the Suggestion Channel`)
                   .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
                   .setDescription(`Start writing in there, to write a Suggestion, to accept/deny them use the: \`${prefix}suggest <approve/deny/maybe> <MESSAGEID> [REASON]\` command`.substr(0, 2048))
                   .setFooter(es.footertext, es.footericon)
@@ -139,7 +139,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("<:RedNope:914312373890854922> ERROR | Something went wrong, please contact: `CEO│Eul Joromat#0923`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -154,7 +154,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply(new Discord.MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`Cancelled the Operation!`.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)
@@ -178,7 +178,7 @@ module.exports = {
               try {
                 client.settings.remove(message.guild.id, message.content, "suggest.approvemsg");
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle(`<a:yes:833101995723194437> I changed the Approve Message to...`)
+                  .setTitle(`<:GreenCheck:914034845112479774> I changed the Approve Message to...`)
                   .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
                   .setDescription(`${message.content}`.substr(0, 2048))
                   .setFooter(es.footertext, es.footericon)
@@ -186,7 +186,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("<:RedNope:914312373890854922> ERROR | Something went wrong, please contact: `CEO│Eul Joromat#0923`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -201,7 +201,7 @@ module.exports = {
           })
         if (timeouterror)
           return message.reply(new Discord.MessageEmbed()
-            .setTitle("<:no:833101993668771842> ERROR | Your Time ran out")
+            .setTitle("<:RedNope:914312373890854922> ERROR | Your Time ran out")
             .setColor(es.wrongcolor)
             .setDescription(`Cancelled the Operation!`.substr(0, 2000))
             .setFooter(es.footertext, es.footericon)

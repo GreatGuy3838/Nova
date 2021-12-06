@@ -17,27 +17,27 @@ module.exports = {
         message.channel.send(new Discord.MessageEmbed()
         .setAuthor("Member Count Information About: " +  message.guild.name, message.guild.iconURL({
           dynamic: true
-        }), "discord.gg/sakshyam")
+        }), "https://discord.com/api/oauth2/authorize?client_id=797643112302247967&permissions=8&scope=bot")
         .setColor(es.color)
-        .addField("<a:un_arrow1:863017195004887060> Total USERS", "😀 \`" + message.guild.memberCount + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> Total HUMANS", "👤 \`" + message.guild.members.cache.filter(member => !member.user.bot).size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> Total BOTS", "🤖 \`" + message.guild.members.cache.filter(member => member.user.bot).size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Total USERS", "😀 \`" + message.guild.memberCount + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Total HUMANS", "👤 \`" + message.guild.members.cache.filter(member => !member.user.bot).size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> Total BOTS", "🤖 \`" + message.guild.members.cache.filter(member => member.user.bot).size + "\`", true)
         
-        .addField("<a:un_arrow1:863017195004887060> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.presence.status != "offline").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status != "offline").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status != "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.presence.status != "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status != "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status != "offline").size + "\`", true)
         
-        .addField("<a:un_arrow1:863017195004887060> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.presence.status == "idle").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "idle").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "idle").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.presence.status == "idle").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "idle").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "idle").size + "\`", true)
         
-        .addField("<a:un_arrow1:863017195004887060> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.presence.status == "dnd").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> DND", "🔴 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "dnd").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "dnd").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.presence.status == "dnd").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> DND", "🔴 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "dnd").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "dnd").size + "\`", true)
         
-        .addField("<a:un_arrow1:863017195004887060> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.presence.status == "offline").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "offline").size + "\`", true)
-        .addField("<a:un_arrow1:863017195004887060> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.presence.status == "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "offline").size + "\`", true)
+        .addField("<:RGBARROWRIGHT:914738789681885214> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "offline").size + "\`", true)
         .setTimestamp()
       );
     } catch (e) {
@@ -51,12 +51,3 @@ module.exports = {
     }
   }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

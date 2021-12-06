@@ -217,11 +217,11 @@ module.exports = client => {
             break;
           }
         } catch {
-          ts = "Could not find who invited him"
+          ts = `Sory I not see `
         }
       }
     } catch {
-      ts = "Could not find who invited him"
+      ts = `Sory I not see`
     }
 
 

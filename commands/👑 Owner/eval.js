@@ -22,11 +22,11 @@ module.exports = {
   usage: `eval <CODE>`,
   run: async (client, message, args, cmduser, text, prefix) => {
     let es = client.settings.get(message.guild.id, "embed")
-    if ("442355791412854784" !== message.author.id)
+    if ("757243549774381099" !== message.author.id)
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(client.user.username, es.footericon)
-        .setTitle(`${emoji.msg.ERROR}  Error | You are not allowed to run this command! Only the **\`Tomato#6966\`** is allowed to run this Cmd`)
+        .setTitle(`${emoji.msg.ERROR}  Error | You are not allowed to run this command! Only the **\`CEO│Eul Joromat#0923\`** is allowed to run this Cmd`)
       );
     if (!args[0])
       return message.channel.send(new MessageEmbed()
@@ -45,7 +45,7 @@ module.exports = {
       if (string.includes(client.token)) return console.log(`ERROR NO TOKEN GRABBING ;)`.red);
       //define queueembed
       let evalEmbed = new MessageEmbed()
-        .setTitle(`Milrato Development | Evaluation`)
+        .setTitle(`KARONA | Evaluation`)
         .setColor(es.color);
       //split the description
       const splitDescription = splitMessage(string, {
@@ -69,12 +69,3 @@ module.exports = {
     }
   },
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

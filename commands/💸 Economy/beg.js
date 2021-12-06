@@ -14,14 +14,14 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> THIS COMMAND IS CURRENTLY DISABLED`)
+        .setTitle(`<a:Deny:863000078690811905> THIS COMMAND IS CURRENTLY DISABLED`)
         .setDescription(`An Admin can enable it with: \`${prefix}setup-commands\``)
       );
     }
     try {
       //command
       var user = message.author
-      if (user.bot) return message.reply("<:no:833101993668771842> **A Discord Bot can not have Economy!**")
+      if (user.bot) return message.reply("<a:Deny:863000078690811905> **A Discord Bot Can Not Have Economy!**")
       //ensure the economy data
       ensure_economy_user(client, message.guild.id, user.id)
       //get the economy data 
@@ -36,7 +36,7 @@ module.exports = {
           embed: new MessageEmbed()
             .setColor(es.wrongcolor)
             .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
-            .setTitle(`<:no:833101993668771842> You've already collected your beg reward!`)
+            .setTitle(`<a:Deny:863000078690811905> You've already collected your beg reward!`)
             .setDescription(`🕐 **Try again in ${time.map(i => `\`${i}\``).join(", ")}**\n\n👛 You still have \`${nFormatter(Math.floor(data.balance))} 💸\` in your Pocket`)
         });
       }
@@ -56,15 +56,15 @@ module.exports = {
         return message.reply(new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
           .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
-          .setTitle(`<a:yes:833101995723194437> You've collected your beg reward of \`${amount} 💸\``)
-          .setDescription(`👛 You now have \`${nFormatter(Math.floor(data.balance))} 💸\` in your Pocket`)
+          .setTitle(`<a:yes:863000006609076245> You've Collected Your Beg Reward Of \`${amount} 💸\``)
+          .setDescription(`👛 You Now Have \`${nFormatter(Math.floor(data.balance))} 💸\` In Your Pocket`)
         );
       }
     } catch (e) {
       console.log(String(e.stack).bgRed)
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> An error occurred`)
+        .setTitle(`<a:Deny:863000078690811905> An error occurred`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       );
     }
