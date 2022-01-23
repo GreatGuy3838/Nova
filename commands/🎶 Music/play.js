@@ -19,7 +19,7 @@ module.exports = {
           return message.channel.send(new MessageEmbed()
             .setColor(es.wrongcolor)
             .setFooter(es.footertext, es.footericon)
-            .setTitle(`<:no:833101993668771842> THIS COMMAND IS CURRENTLY DISABLED`)
+            .setTitle(`:x: THIS COMMAND IS CURRENTLY DISABLED`)
             .setDescription(`An Admin can enable it with: \`${prefix}setup-commands\``)
           );
         }
@@ -28,7 +28,7 @@ module.exports = {
       if (!args[0])
         return message.channel.send(new MessageEmbed()
           .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-          .setTitle(`<:no:833101993668771842> You need to give me a URL or a Search term.`)
+          .setTitle(`:x: You need to give me a URL or a Search term.`)
         );
           message.channel.send(new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null).setFooter(es.footertext, es.footericon)
@@ -44,7 +44,7 @@ module.exports = {
       console.log(String(e.stack).bgRed)
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:no:833101993668771842> An error occurred`)
+        .setTitle(`:x: An error occurred`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       );
     }

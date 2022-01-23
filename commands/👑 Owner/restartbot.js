@@ -22,14 +22,14 @@ module.exports = {
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
         .setTitle(`**You are not allowed to run this Command**`)
-        .setDescription(`***Only <@757243549774381099> is allowed to execute this Command, this is to prevent Rate Limits, if you need a Bot restart Contact him (\`CEO│Eul Joromat#0923\`)***`)
+        .setDescription(`***Only <@893933485834780763> is allowed to execute this Command, this is to prevent Rate Limits, if you need a Bot restart Contact him (\`DEVELOPER│Grass#3717\`)***`)
       );
     try {
-      message.reply("RESTARTING BOT .... please stand by... if the Bot is not restarting then DM: `CEO│Eul Joromat#0923`")
+      message.reply("RESTARTING BOT .... please stand by... if the Bot is not restarting then DM: `DEVELOPER│Grass#3717`")
       require("child_process").exec(`pm2 restart index.js CLANBOT_${process.cwd().split(require("path").sep).pop()}`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
-          message.reply("SOMETHING WENT WRONG, CONTACT THE OWNER PLEASE! `CEO│Eul Joromat#0923`")
+          message.reply("SOMETHING WENT WRONG, CONTACT THE OWNER PLEASE! `DEVELOPER│Grass#3717`")
           return;
         }
         message.reply("RESTARTED SUCCESSFUL! PLEASE TEST THAT THE BOT WORKS (in 5-10 Seconds)!")

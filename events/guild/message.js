@@ -51,7 +51,7 @@ module.exports = async (client, message) => {
             return message.channel.send(new Discord.MessageEmbed()
               .setColor(es.wrongcolor)
               .setFooter(es.footertext, es.footericon)
-              .setTitle(`<:no:833101993668771842> Error | Not in the Bot Chat!`)
+              .setTitle(`:x: Error | Not in the Bot Chat!`)
               .setDescription(`There is a Bot chat setup in this GUILD! try using the Bot Commands here:\n> ${leftb.substr(0, leftb.length - 3)}`)
             ).then(async msg => {
               try{
@@ -70,7 +70,7 @@ module.exports = async (client, message) => {
       if(matchedPrefix.includes(client.user.id))
         return message.channel.send(new Discord.MessageEmbed()
           .setColor(es  .color)
-          .setTitle(`${emoji.msg.SUCCESS} **To see all Commands type: \`${prefix}help\`**`)
+          .setTitle(`✅ **To see all Commands type: \`${prefix}help\`**`)
         );
       return;
       }
@@ -101,7 +101,7 @@ module.exports = async (client, message) => {
             message.channel.send(new Discord.MessageEmbed()
               .setColor(es.wrongcolor)
               .setFooter(es.footertext, es.footericon)
-              .setTitle(`<:no:833101993668771842> Unkown command, try: **\`${prefix}help\`**`)
+              .setTitle(`:x: Unkown command, try: **\`${prefix}help\`**`)
               .setDescription(`The prefix for this Guild is: \`${prefix}\`\n\nYou can also **ping** me, instead of using a Prefix!\n\nTo see all Commands Type \`${prefix}help [Cat/Cmd]\`\n\nTo see all available setups type \`${prefix}setup\``)
             ).then(async msg => {
               try{
@@ -126,7 +126,7 @@ module.exports = async (client, message) => {
             try{ message.react("833101993668771842"); }catch{}
             return message.channel.send(new Discord.MessageEmbed()
               .setColor(es.wrongcolor)
-              .setTitle(`<:no:833101993668771842> Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`)
+              .setTitle(`:x: Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`)
             ); //send an information message
           }
         }
@@ -147,8 +147,8 @@ module.exports = async (client, message) => {
             not_allowed = true;
             return message.channel.send(new MessageEmbed()
               .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-              .setTitle(`<:no:833101993668771842> **THIS COMMAND IS PREMIUM ONLY** <a:nitro:833402717506502707>`)
-              .setDescription(`This means, you need to **pay** in Order to be able to use this Command!\n\n[Website](https://milrato.eu) - [Pay through here](https://discord.gg/FQGXbypRf8)`)
+              .setTitle(`:x: **THIS COMMAND IS PREMIUM ONLY** `)
+              .setDescription(`This means, you need to **pay** in Order to be able to use this Command!\n\n[Website](https://discord.gg/) - [Pay through here](https://discord.gg/nSD9qV95p4)`)
             );
           }
         }
@@ -161,7 +161,7 @@ module.exports = async (client, message) => {
             message.channel.send(new Discord.MessageEmbed()
               .setColor(es.wrongcolor)
               .setFooter(es.footertext, es.footericon)
-              .setTitle("<:no:833101993668771842> Error | You are not not_allowed to run this command!")
+              .setTitle(":x: Error | You are not not_allowed to run this command!")
               .setDescription(`You need these Permissions: \`${command.memberpermissions.join("`, ``")}\``)
             ).then(async msg => {
               try{
@@ -214,7 +214,7 @@ module.exports = async (client, message) => {
                       return message.channel.send(new Discord.MessageEmbed()
                       .setColor(ee.wrongcolor)
                       .setFooter(ee.footertext, ee.footericon)
-                      .setTitle("<:no:833101993668771842> Error | You are not allowed to run this command!")
+                      .setTitle(":x: Error | You are not allowed to run this command!")
                       .setDescription(`You need to have one of those Roles:\n${leftb.substr(0, leftb.length-2)}`)
                     ).then(msg => {
                       try{
@@ -228,7 +228,7 @@ module.exports = async (client, message) => {
                       return message.channel.send(new Discord.MessageEmbed()
                       .setColor(ee.wrongcolor)
                       .setFooter(ee.footertext, ee.footericon)
-                      .setTitle("<:no:833101993668771842> Error | You are not allowed to run this command!")
+                      .setTitle(":x: Error | You are not allowed to run this command!")
                       .setDescription(`You need to have one of those Roles:\n${leftb.substr(0, leftb.length-2)}`)
                     ).then(msg => {
                       try{
@@ -242,7 +242,7 @@ module.exports = async (client, message) => {
                       return message.channel.send(new Discord.MessageEmbed()
                       .setColor(ee.wrongcolor)
                       .setFooter(ee.footertext, ee.footericon)
-                      .setTitle("<:no:833101993668771842> Error | You are not allowed to run this command!")
+                      .setTitle(":x: Error | You are not allowed to run this command!")
                       .setDescription(`You need to have one of those Roles:\n${leftb.substr(0, leftb.length-2)}\n\nOr be the Requester (${player.queue.current.requester}) of the current Track!`)
                     ).then(msg => {
                       try{
@@ -282,7 +282,7 @@ module.exports = async (client, message) => {
               return message.channel.send(new MessageEmbed()
                 .setColor(ee.wrongcolor)
                 .setFooter(ee.footertext, ee.footericon)
-                .setTitle(`<:no:833101993668771842> You need to join a voice channel.`)
+                .setTitle(`:x: You need to join a voice channel.`)
               );
             }
             //If there is no player, then kick the bot out of the channel, if connected to
@@ -296,7 +296,7 @@ module.exports = async (client, message) => {
                 return message.channel.send(new MessageEmbed()
                   .setColor(ee.wrongcolor)
                   .setFooter(ee.footertext, ee.footericon)
-                  .setTitle(`<:no:833101993668771842> There is nothing playing`)
+                  .setTitle(`:x: There is nothing playing`)
                 );
               }
               if (!mechannel){
@@ -305,7 +305,7 @@ module.exports = async (client, message) => {
                 return message.channel.send(new MessageEmbed()
                   .setColor(ee.wrongcolor)
                   .setFooter(ee.footertext, ee.footericon)
-                  .setTitle(`<:no:833101993668771842> I am not connected to a Channel`)
+                  .setTitle(`:x: I am not connected to a Channel`)
                 );
               }
             }
@@ -316,7 +316,7 @@ module.exports = async (client, message) => {
                 return message.channel.send(new MessageEmbed()
                   .setColor(ee.wrongcolor)
                   .setFooter(ee.footertext, ee.footericon)
-                  .setTitle(`<:no:833101993668771842> There is no previous song yet!`)
+                  .setTitle(`:x: There is no previous song yet!`)
                 );
               }
             }
@@ -325,7 +325,7 @@ module.exports = async (client, message) => {
               return message.channel.send(new MessageEmbed()
                 .setColor(ee.wrongcolor)
                 .setFooter(ee.footertext, ee.footericon)
-                .setTitle(`<:no:833101993668771842> You need to be in my voice channel to use this command!`)
+                .setTitle(`:x: You need to be in my voice channel to use this command!`)
                 .setDescription(`Channelname: \`🔈 ${message.guild.channels.cache.get(player.voiceChannel).name}\``)
               );
             }
@@ -334,7 +334,7 @@ module.exports = async (client, message) => {
               return message.channel.send(new MessageEmbed()
                 .setColor(ee.wrongcolor)
                 .setFooter(ee.footertext, ee.footericon)
-                .setTitle(`<:no:833101993668771842> You need to be in my voice channel to use this command!`)
+                .setTitle(`:x: You need to be in my voice channel to use this command!`)
                 .setDescription(`Channelname: \`🔈 ${mechannel.name}\``)
               );
             }
@@ -358,7 +358,7 @@ module.exports = async (client, message) => {
         return message.channel.send(new Discord.MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
-          .setTitle("<:no:833101993668771842> Something went wrong while, running the: `" + command.name + "` command")
+          .setTitle(":x: Something went wrong while, running the: `" + command.name + "` command")
           .setDescription(`\`\`\`${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\`\`\``)
         ).then(async msg => {
           try{
@@ -373,7 +373,7 @@ module.exports = async (client, message) => {
         message.channel.send(new Discord.MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
-          .setTitle(`<:no:833101993668771842> Unkown command, try: **\`${prefix}help\`**`)
+          .setTitle(`:x: Unkown command, try: **\`${prefix}help\`**`)
           .setDescription(`The prefix for this Guild is: \`${prefix}\`\n\nYou can also **ping** me, instead of using a Prefix!\n\nTo see all Commands Type \`${prefix}help [Cat/Cmd]\`\n\nTo see all available setups type \`${prefix}setup\``)
         ).then(async msg => {
           try{
@@ -389,7 +389,7 @@ module.exports = async (client, message) => {
     console.log(String(e.stack).red)
    return message.channel.send(new MessageEmbed()
       .setColor("RED")
-      .setTitle(`<:no:833101993668771842> ERROR | An error occurred!`)
+      .setTitle(`:x: ERROR | An error occurred!`)
       .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
     );
   }

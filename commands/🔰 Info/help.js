@@ -162,15 +162,13 @@ module.exports = {
         let embed = new Discord.MessageEmbed()
         .setThumbnail(client.user.displayAvatarURL())
 .setColor(es.color)
-.setFooter("MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923", client.user.displayAvatarURL())
-.setTitle(`Information about MYTHIC Security`)
-.addField("💡 **__My Features__**",
-`>>> **58+ Systems**, like: 🖥 **Twitter-** & 🖥 **Youtube-Auto-Poster** 
-**Application-**, Ticket-, **Welcome-Images-** and Reaction Role-, ... Systems
-:notes: An advanced <a:question:912598623366283276> **Music System** with **Audio Filtering**
-:video_game: Many **Minigames** and :joystick: **Fun** Commands (150+)
-:no_entry_sign: **Administration** and **Auto-Moderation** and way much more!`)
-        .addField("<a:question:912598623366283276> **__How do you use me?__**",
+.setFooter("ALL IN ONE BOT", client.user.displayAvatarURL())
+.setTitle('**NOVA**')
+.addField("🔗 **__Links__**",
+`>>> **[Invite](https://discord.com/api/oauth2/authorize?client_id=933482669491240980&permissions=1099511627775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FscazJBasBM&response_type=code&scope=bot%20guilds.join%20applications.commands)
+[Support Server](https://discord.gg/scazJBasBM)
+[Vote](https://top.gg/bot/933482669491240980/vote)**`)
+        .addField(":question: **__How do you use me?__**",
 `>>> \`${prefix}setup\` and react with the Emoji for the right action,
 but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 .addField("📶 **__STATS:__**",                           
@@ -181,31 +179,25 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 <a:coin:906106739609436200>●**Uptime:** \`${duration(client.uptime).map(i=> `${i}`).join(", ")}\``)
 
 .addField("🧿 **Ping**", `>>>  📡:**\`${Math.round(Date.now() - message.createdTimestamp)}ms\`
-     📡 **Api Latency:** \`${client.ws.ping}ms\``)
+     📡 ** **Api Latency:** \`${client.ws.ping}ms\``)
 
-        
-        .addField("🛠 **__Developer__**",
- `>>> \` • CEO│Eul Joromat#0923 
- • Dashboard: https://MYTHIC-All-In-One-Dashboard.mr-mythicmythic.repl.co
-\``)
-.setImage("https://share.creavite.co/n4zLUQWYhBSyM8s3.gif")
 
         
 let embed0 = new Discord.MessageEmbed()
 .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
 .setTitle(`🔰 Information Commands 🔰`)
 .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🔰 Info").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-.addField(settings.ECONOMY ? "💸 **Economy** | <a:yes:833101995723194437> ENABLED" : "💸 **Economy** | <:emoji_35:865126603273273355> DISABLED",`> ${client.commands.filter((cmd) => cmd.category === "💸 Economy").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-.addField(settings.SCHOOL ? "🏫 **School** | <a:yes:833101995723194437> ENABLED" : "🏫 **School** | <:emoji_35:865126603273273355> DISABLED", `> ${client.commands.filter((cmd) => cmd.category === "🏫 School Commands").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-.setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+.addField(settings.ECONOMY ? "💸 **Economy** | ✅ ENABLED" : "💸 **Economy** | :x: DISABLED",`> ${client.commands.filter((cmd) => cmd.category === "💸 Economy").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
+.addField(settings.SCHOOL ? "🏫 **School** | ✅ ENABLED" : "🏫 **School** | :x: DISABLED", `> ${client.commands.filter((cmd) => cmd.category === "🏫 School Commands").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
+.setFooter(`Nova\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
           let embed1 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🎶 Music Related Commands :notes:`)
-            .setDescription(`🎶 **Music**${settings.MUSIC ? " | <a:yes:833101995723194437> ENABLED" : " | <:emoji_35:865126603273273355> DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🎶 Music").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .addField(settings.MUSIC ? "👀 **Filter** | <a:yes:833101995723194437> ENABLED" : "👀 **Filter** | <:emoji_35:865126603273273355> DISABLED", `>>> ${client.commands.filter((cmd) => cmd.category === "👀 Filter").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .addField(settings.MUSIC ? "⚜️ **Custom Queue(s)** | <a:yes:833101995723194437> ENABLED" : "⚜️ **Custom Queue(s)** | <:emoji_35:865126603273273355> DISABLED", `${client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setDescription(`🎶 **Music**${settings.MUSIC ? " | ✅ ENABLED" : " | :x: DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🎶 Music").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
+            .addField(settings.MUSIC ? "👀 **Filter** | ✅ ENABLED" : "👀 **Filter** | :x: DISABLED", `>>> ${client.commands.filter((cmd) => cmd.category === "👀 Filter").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
+            .addField(settings.MUSIC ? "⚜️ **Custom Queue(s)** | ✅ ENABLED" : "⚜️ **Custom Queue(s)** | :x: DISABLED", `${client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
               let embed2 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
@@ -213,40 +205,40 @@ let embed0 = new Discord.MessageEmbed()
             .setDescription(`⚙️ **Settings**\n> ${client.commands.filter((cmd) => cmd.category === "⚙️ Settings").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField("👑 **Owner**", `>>> ${client.commands.filter((cmd) => cmd.category === "👑 Owner").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField("⌨️ **Programming**", `${client.commands.filter((cmd) => cmd.category === "⌨️ Programming").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
            let embed3 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🎤 Voice & Ranking Commands 📈`)
-            .setDescription(`🎤 **Voice**${settings.VOICE ? " | <a:yes:833101995723194437> ENABLED" : " | <:emoji_35:865126603273273355> DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🎤 Voice").map((cmd) => `**Command:**\n>>> \`${cmd.name}\`\n\n**Usage:**\n ${cmd.usage}`)}`)
+            .setDescription(`🎤 **Voice**${settings.VOICE ? " | ✅ ENABLED" : " | :x: DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🎤 Voice").map((cmd) => `**Command:**\n>>> \`${cmd.name}\`\n\n**Usage:**\n ${cmd.usage}`)}`)
             .addField("📈 **Ranking**", `>>> ${client.commands.filter((cmd) => cmd.category === "📈 Ranking").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .addField(settings.SOUNDBOARD ? "🔊 **Soundboard** | <a:yes:833101995723194437> ENABLED" : "🔊 **Soundboard** | <:emoji_35:865126603273273355> DISABLED", `${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .addField(settings.SOUNDBOARD ? "🔊 **Soundboard** | ✅ ENABLED" : "🔊 **Soundboard** | :x: DISABLED", `${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
             
               let embed4 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🎮 Mini Games & Fun Commands 🕹️`)
-            .setDescription(`🕹️ **Fun**${settings.FUN ? " | <a:yes:833101995723194437> ENABLED" : " | <:emoji_35:865126603273273355> DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🕹️ Fun").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .addField(settings.MINIGAMES ? "🎮 **Mini Games** | <a:yes:833101995723194437> ENABLED" : "🎮 **Mini Games**| <:emoji_35:865126603273273355> DISABLED", `> ${client.commands.filter((cmd) => cmd.category === "🎮 MiniGames").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setDescription(`🕹️ **Fun**${settings.FUN ? " | ✅ ENABLED" : " | :x: DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🕹️ Fun").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
+            .addField(settings.MINIGAMES ? "🎮 **Mini Games** | ✅ ENABLED" : "🎮 **Mini Games**| :x: DISABLED", `> ${client.commands.filter((cmd) => cmd.category === "🎮 MiniGames").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
             let embed5 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🚫 Administration & Setup Commands 💪`)
             .setDescription(`🚫 **Admin**\n> ${client.commands.filter((cmd) => cmd.category === "🚫 Administration").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField("💪 **Setup**", `>>> ${client.commands.filter((cmd) => cmd.category === "💪 Setup").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
             let embed6 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-            .setTitle(settings.NSFW ? "🔞 NSFW Commands 🔞 | <a:yes:833101995723194437> ENABLED" : "🔞 NSFW Commands 🔞 | <:emoji_35:865126603273273355> DISABLED")
+            .setTitle(settings.NSFW ? "🔞 NSFW Commands 🔞 | ✅ ENABLED" : "🔞 NSFW Commands 🔞 | :x: DISABLED")
             .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🔞 NSFW").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
           
           let embed7 = new Discord.MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
           .setTitle("🦾 Custom Commands")
-          .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
+          .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
           let cuc = client.customcommands.get(message.guild.id, "commands");
           if (cuc.length < 1) cuc = ["NO CUSTOM COMMANDS DEFINED YET, do it with: `!setup-customcommands`"]
           else cuc = cuc.map(cmd => `\`${cmd.name}\``)
@@ -258,13 +250,13 @@ let embed0 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🤞 Mincraft`)
             .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🤞 Mincraft").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
 
         let embed9 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🔎 Search`)
             .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🔎 Search").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`MYTHIC Security Bot | Made by: CEO│Eul Joromat#0923\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
 
         let menumsg = await message.channel.send(embed, selection)
@@ -316,7 +308,7 @@ let embed0 = new Discord.MessageEmbed()
       console.log(String(e.stack).bgRed)
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor).setFooter(es.footertext, es.footericon)
-        .setTitle(`<:emoji_35:865126603273273355> An error occurred`)
+        .setTitle(`:x: An error occurred`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       );
     }

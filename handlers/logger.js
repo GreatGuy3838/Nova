@@ -478,11 +478,8 @@ NEW PERMISSIONS: ${newRole.permissions.bitfield}
       }
     });
 
-  } catch (e) {
-  }
-}
-
-async function send_log(c, guild, color, title, description, thumb) {
+  } caPowered {
+ NOVAsync function send_log(c, guild, color, title, description, thumb) {
   try {
     //CREATE THE EMBED
     const LogEmbed = new Discord.MessageEmbed()

@@ -1,12 +1,12 @@
 {
   "msg": {
-    "COMMENT": "IF YOU DECIDE TO USE CUSTOM EMOJIS, USE THE NAME AND THE ID IN MSG, EXAMPLE: ⬜ --> <:progressbar_left_filled:818558865268408341>",
+    "COMMENT": "",
 
-    "ERROR" : "<a:865963806483808256:896694904019894282>",
-    "SUCCESS" : "<a:797855362694774804:891459284183941170>",
+    "ERROR" : "✅",
+    "SUCCESS" : "✅",
 
-    "disabled" : "<a:865963806483808256:896694904019894282> ",
-    "enabled" : "<a:797855362694774804:891459284183941170>",
+    "disabled" :  "✅",
+    "enabled" : "✅",
 
     "progress_bar": {
       "leftindicator": "[",
@@ -32,7 +32,7 @@
     "pause": "⏸",
     "lyrics": "📃",
     "disk": "📀",
-    "ping": "<a:867324405561425941:892077597998067763>",
+    "ping": "🔔",
 
     "rewind": "⏪",
     "forward": "⏩",
@@ -52,10 +52,10 @@
   },
   "react": {
 
-    "COMMENT": "IF YOU DECIDE TO USE CUSTOM EMOJIS, USE JUST THE ID IN REACT, EXAMPLE: ⏪ --> 818558865268408341",
+    "COMMENT": "",
 
-    "ERROR" : "896694904019894282",
-    "SUCCESS" : "891459284183941170",
+    "ERROR" : ":x:",
+    "SUCCESS" : ":white_check_mark",
 
 
     "rewind": "⏪",

@@ -1,28 +1,29 @@
 {
-  "google" : "AIzaSyDFriQGrX5SrCLAwm2Y5kB7s-2zwjSujmA",
-   "prefix": "s!",
-   "prefixes": ["s!", "s!", "s!", "s!"],
+  
+  "google" : "AIzaSyClGPNDwy2FtUJHArPBuN9SUoEqsHUHnWk",
+   "prefix": "!",
+   "prefixes": ["!", "", "", ""],
    "ownerIDS": [
-      "757243549774381099"
+      "893933485834780763"
    ],
    "status": {
-      "text": "s!help | s!play",
+      "text": "!help | NOVA OFFICIAL BOT",
       "type": "STREAMING",
       "COMMENT:": "TYPES ARE: PLAYING, STREAMING, WATCHING, LISTENING",
-      "url": "https://www.twitch.tv/ceo_mythic"
+      "url": "https://discord.gg/scazJBasBM"
    },
    "clientsettings": {
       "nodes": [
          {
-            "host": "lavalinknl.ml",
+            "host": "lavalink.eu",
             "port": 2333,
             "password": "Raccoon"
          }
       ]
    },
    "spotify": {
-      "clientSecret": "rf7Jy_dnfxQR9lUT8Ke72DyeiedCP25h",
-      "clientID": "797643112302247967"
+      "clientSecret": "a42121062b204106b97a9ed3db621943",
+      "clientID": "1bba4d9ea5484b319855ca601c37aee0"
    },
    "settings": {
       "COMMENT": "time_delay 0 === insta leave",
@@ -38,7 +39,7 @@
    },
    "lyricssettings": {
       "lyrics_finder": true,
-      "COMMENT": "my suggestion is to use ksoft_api on true and paste in the api key u can sign up, until u get the key use lyrics_finder which is way weaker but better the nothing",
+      "COMMENT": "",
       "ksoft_api": {
          "use_this_instead": true,
          "api_key": "AIzaSyAVph-V_duKCbh-yOqPvvfmeRGqVQ8SkkY"

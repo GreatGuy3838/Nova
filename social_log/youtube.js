@@ -85,7 +85,7 @@ module.exports = client => {
                     client.youtube_log.ensure(yt, {
                         oldvid: "",
                         alrsent: [],
-                        message: "**{videoAuthorName}** uploaded \`{videoTitle}\`!\n**Watch it:** {videoURL}"
+                        message: "Hey @everyone **{videoAuthorName}** uploaded \`{videoTitle}\`!\n**Watch it:** {videoURL}"
                     })
                 }
                 client.social_log.get(guildid, "youtube.channels").forEach(async (youtuber) => {

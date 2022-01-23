@@ -26,7 +26,7 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(client.user.username, es.footericon)
-        .setTitle(`${emoji.msg.ERROR}  Error | You are not allowed to run this command! Only the **\`CEO│Eul Joromat#0923\`** is allowed to run this Cmd`)
+        .setTitle(`${emoji.msg.ERROR}  Error | You are not allowed to run this command! Only the **\`DEVELOPER│Grass#3717\`** is allowed to run this Cmd`)
       );
     if (!args[0])
       return message.channel.send(new MessageEmbed()

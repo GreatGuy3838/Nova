@@ -139,7 +139,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:RedNope:914312373890854922> ERROR | Something went wrong, please contact: `CEO│Eul Joromat#0923`")
+                  .setTitle("<:RedNope:914312373890854922> ERROR | Something went wrong, please contact: `DEVELOPER│Grass#3717`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -186,7 +186,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:RedNope:914312373890854922> ERROR | Something went wrong, please contact: `CEO│Eul Joromat#0923`")
+                  .setTitle("<:RedNope:914312373890854922> ERROR | Something went wrong, please contact: `DEVELOPER│Grass#3717`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -277,7 +277,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Grass#3717`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -322,7 +322,7 @@ module.exports = {
                 );
               } catch (e) {
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Grass#3717`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -368,7 +368,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Grass#3717`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -422,7 +422,7 @@ module.exports = {
                   );
                 } else {
                   return message.reply(new Discord.MessageEmbed()
-                    .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                    .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Grass#3717`")
                     .setColor(es.wrongcolor)
                     .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                     .setFooter(es.footertext, es.footericon)
@@ -431,7 +431,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Grass#3717`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -485,7 +485,7 @@ module.exports = {
                   );
                 } else {
                   return message.reply(new Discord.MessageEmbed()
-                    .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                    .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Grass#3717`")
                     .setColor(es.wrongcolor)
                     .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                     .setFooter(es.footertext, es.footericon)
@@ -494,7 +494,7 @@ module.exports = {
               } catch (e) {
                 console.log(e)
                 return message.reply(new Discord.MessageEmbed()
-                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Tomato#6966`")
+                  .setTitle("<:no:833101993668771842> ERROR | Something went wrong, please contact: `Grass#3717`")
                   .setColor(es.wrongcolor)
                   .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                   .setFooter(es.footertext, es.footericon)
@@ -517,7 +517,7 @@ module.exports = {
       } else {
         console.log("e")
         return message.reply(new Discord.MessageEmbed()
-          .setTitle("<:no:833101993668771842> ERROR | PLEASE CONTACT `Tomato#6966`")
+          .setTitle("<:no:833101993668771842> ERROR | PLEASE CONTACT `Grass#3717`")
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
         );

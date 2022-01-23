@@ -2,19 +2,9 @@ const Discord = require("discord.js");
 const colors = require("colors");
 const Enmap = require("enmap");
 const fs = require("fs");
+const DBL = require('dblapi.js');
 const Emoji = require("./botconfig/emojis.json")
 const config = require("./botconfig/config.json")
-const express = require('express');
-
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Nham Bi')
-});
-
-app.listen(3000, () => {
-  console.log('24/7 web server started!');
-});
 
 
 const client = new Discord.Client({
@@ -36,24 +26,42 @@ const client = new Discord.Client({
   }
 });
 
+const dbl = new DBL(process.env.TOPGG_TOKEN, { webhookPort: 3000, webhookAuth: process.env.TOPGG_AUTH });
+dbl.webhook.on('ready', hook => {
+  console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
+});
+dbl.webhook.on('vote', vote => {
+  const channel = client.channels.cache.get(process.env.POST_CHANNEL)
+  const embed = new Discord.MessageEmbed()
+  .setTitle("**__Nova Vote__**")
+  .setDescription(`**
+**
+**Voter: <@${vote.user}>**
+**Bot: <@${vote.bot}>**
+**Type: ${vote.type}**
+**2x: ${vote.isWeekend}**
+**Link: ${process.env.VOTE_LINK}**`)
+  .setImage(process.env.IMAGE_LINK)
+  .setColor("GREEN")
+  channel.send(embed)
+});
+
 client.setMaxListeners(50);
 require('events').defaultMaxListeners = 50;
-
-
 
 const Meme = require("memer-api");
 client.memer = new Meme("D7FKH5ltWUe");
 
-
 client.adenabled = true;
 client.statusad = {
-  name: `s!Help | By CEO│Eul Joromat#0923`,
-  type: "PLAYING", 
-  url: "https://discord.gg/G22vGgkf5B"
+  name: `!help | NOVA OFFICIAL BOT`,
+  type: "STREAMING", 
+  url: ""
 };
 client.spacedot = "・";
-client.textad = "$Help | By CEO│Eul Joromat#0923";
+client.textad = ".";
 
+//DBL
 
 //Loading discord-buttons
 const dbs = require('discord-buttons');
@@ -92,7 +100,6 @@ function requireallhandlers(){
     try{ require(`./handlers/${handler}`)(client); }catch (e){ console.log(e) }
   });
 }requireallhandlers();
-
 
  client.login(process.env.TOKEN);
 
@@ -281,3 +288,5 @@ client.on("ready", () => {
         }
     })
 })
+
+client.login(process.env.TOKEN)

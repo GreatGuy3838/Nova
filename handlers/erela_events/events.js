@@ -32,7 +32,7 @@ var {
             } catch {}
             try {
               embed.setDescription(`**Commands bound to: ** <#${client.channels.cache.get(player.textChannel).id}>`)
-              embed.addField(`${client.user.username} Powered by BROKARONAGAMING`, `**[Invite their Public Bot](https://discord.com/api/oauth2/authorize?client_id=855662770757435422&permissions=8&scope=bot) •  [Support Server](https://discord.gg/xWgyrzp74m)**`)
+              embed.addField(`${client.user.username} Powered by NOVA`, `**[Invite](https://discord.gg/scazJBasBM) •  [Support Server](https://discord.gg)**`)
             } catch {}
 
             await client.channels.cache.get(player.textChannel).send(embed.setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)).catch(e=>console.log("this prevents a crash"));

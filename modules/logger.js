@@ -249,7 +249,7 @@ let embed = new MessageEmbed()
   .setColor(color)
   .setDescription(desc.substr(0, 2000))
   .setTimestamp()
-  .setFooter("Milrato", config.AVATARURL)
+  .setFooter("NOVA", config.AVATARURL)
   if(title) embed.setTitle(("❗ | " + title).substr(0, 250))
   client.setups.ensure(guild.id,  {
     enabled: false,

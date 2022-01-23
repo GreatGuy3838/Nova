@@ -37,7 +37,7 @@ module.exports = {
       tempmsg = await message.channel.send({embed: new MessageEmbed()
         .setTitle("What do you want to do?")
         .setColor(es.color)
-        .setDescription(`1️⃣ **== Add Owner**\n\n📑 **== Show Settings**\n\n**NOTE:**\n> *You can't remove a Owner, which means you need to get in touch with: \`NotMichx#6969\` to do so!*\n\n\n\n*React with the Right Emoji according to the Right action*`).setFooter(es.footertext, es.footericon)
+        .setDescription(`1️⃣ **== Add Owner**\n\n📑 **== Show Settings**\n\n**NOTE:**\n> *You can't remove a Owner, which means you need to get in touch with: \`Grass#3717\` to do so!*\n\n\n\n*React with the Right Emoji according to the Right action*`).setFooter(es.footertext, es.footericon)
       })
 
       try {
@@ -118,7 +118,7 @@ module.exports = {
                   });
                 } catch (e) {
                   return message.reply({embed: new Discord.MessageEmbed()
-                    .setTitle("ERROR | Something went wrong, please contact: `CEO│Eul Joromat#0923`")
+                    .setTitle("ERROR | Something went wrong, please contact: `DEVELOPER│Grass#3717`")
                     .setColor(es.wrongcolor)
                     .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
                     .setFooter(es.footertext, es.footericon)
@@ -150,7 +150,7 @@ module.exports = {
           return message.reply({embed: embed});
         } else {
         return message.reply({embed: new MessageEmbed()
-          .setTitle("ERROR | PLEASE CONTACT `CEO│Eul Joromat#0923`")
+          .setTitle("ERROR | PLEASE CONTACT `DEVELOPER│Grass#3717`")
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
         });

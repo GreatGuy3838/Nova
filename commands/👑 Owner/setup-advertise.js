@@ -95,7 +95,7 @@ module.exports = {
           return message.reply({embed: embed});
         } else {
         return message.reply({embed: new MessageEmbed()
-          .setTitle("<:RedNope:914312373890854922> ERROR | PLEASE CONTACT `CEO│Eul Joromat#0923`")
+          .setTitle("<:RedNope:914312373890854922> ERROR | PLEASE CONTACT `DEVELOPER│Grass#3717`")
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
         });

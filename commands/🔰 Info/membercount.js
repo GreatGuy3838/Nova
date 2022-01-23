@@ -17,27 +17,27 @@ module.exports = {
         message.channel.send(new Discord.MessageEmbed()
         .setAuthor("Member Count Information About: " +  message.guild.name, message.guild.iconURL({
           dynamic: true
-        }), "https://discord.com/api/oauth2/authorize?client_id=797643112302247967&permissions=8&scope=bot")
+        }), "https://discord.com/api/oauth2/authorize?client_id=894039762837602367&permissions=8&scope=applications.commands%20bot")
         .setColor(es.color)
-        .addField("<:RGBARROWRIGHT:914738789681885214> Total USERS", "😀 \`" + message.guild.memberCount + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> Total HUMANS", "👤 \`" + message.guild.members.cache.filter(member => !member.user.bot).size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> Total BOTS", "🤖 \`" + message.guild.members.cache.filter(member => member.user.bot).size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> Total USERS", "😀 \`" + message.guild.memberCount + "\`", true)
+        .addField("<:emoji_13:911956334289747968> Total HUMANS", "👤 \`" + message.guild.members.cache.filter(member => !member.user.bot).size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> Total BOTS", "🤖 \`" + message.guild.members.cache.filter(member => member.user.bot).size + "\`", true)
         
-        .addField("<:RGBARROWRIGHT:914738789681885214> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.presence.status != "offline").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status != "offline").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status != "offline").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.presence.status != "offline").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status != "offline").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> ONLINE", "🟢 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status != "offline").size + "\`", true)
         
-        .addField("<:RGBARROWRIGHT:914738789681885214> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.presence.status == "idle").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "idle").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "idle").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.presence.status == "idle").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "idle").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> IDLE", "🟠 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "idle").size + "\`", true)
         
-        .addField("<:RGBARROWRIGHT:914738789681885214> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.presence.status == "dnd").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> DND", "🔴 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "dnd").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "dnd").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.presence.status == "dnd").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> DND", "🔴 \`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "dnd").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> DND", "🔴 \`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "dnd").size + "\`", true)
         
-        .addField("<:RGBARROWRIGHT:914738789681885214> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.presence.status == "offline").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "offline").size + "\`", true)
-        .addField("<:RGBARROWRIGHT:914738789681885214> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "offline").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.presence.status == "offline").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => !member.user.bot && member.presence.status == "offline").size + "\`", true)
+        .addField("<:emoji_13:911956334289747968> OFFLINE", ":black_circle:\`" + message.guild.members.cache.filter(member => member.user.bot && member.presence.status == "offline").size + "\`", true)
         .setTimestamp()
       );
     } catch (e) {
@@ -45,7 +45,7 @@ module.exports = {
       return message.channel.send(new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(es.footertext, es.footericon)
-        .setTitle(`ERROR | An error occurred`)
+        .setTitle(` :X: ERROR | An error occurred`)
         .setDescription(`\`\`\`${String(JSON.stringify(e)).substr(0, 2000)}\`\`\``)
       );
     }
