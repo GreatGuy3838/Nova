@@ -3,9 +3,16 @@ const colors = require("colors");
 const Enmap = require("enmap");
 const fs = require("fs");
 const DBL = require('dblapi.js');
+const express = require('express');
 const Emoji = require("./botconfig/emojis.json")
 const config = require("./botconfig/config.json")
 
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => res.send('NOVA OFFICIAL'));
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 const client = new Discord.Client({
 

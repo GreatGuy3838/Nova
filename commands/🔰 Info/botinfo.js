@@ -47,7 +47,6 @@ module.exports = {
                     .addField("<:CrownPong:914402799528333322> API Latency", `\`${client.ws.ping}ms\``)
                     .addField("<:BotDeveloperBadge:914361127939493928> Developer",
                     `\` 1 • DEVELOPER│Grass#3717\``)
-                  .addField("[Top.gg Statistics](https://top.gg/api/widget/933482669491240980.svg)")
 
                 message.channel.send(botinfo);
             })

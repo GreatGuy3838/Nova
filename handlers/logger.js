@@ -478,8 +478,11 @@ NEW PERMISSIONS: ${newRole.permissions.bitfield}
       }
     });
 
-  } caPowered {
- NOVAsync function send_log(c, guild, color, title, description, thumb) {
+  } catch (e) {
+  }
+}
+
+async function send_log(c, guild, color, title, description, thumb) {
   try {
     //CREATE THE EMBED
     const LogEmbed = new Discord.MessageEmbed()
@@ -490,7 +493,7 @@ NEW PERMISSIONS: ${newRole.permissions.bitfield}
       .setThumbnail(thumb ? thumb : guild.iconURL({
         format: "png"
       }))
-      .setFooter(guild.name + " | powered by: milrato.eu", guild.iconURL({
+      .setFooter(guild.name + " | powered by: Nova", guild.iconURL({
         format: "png"
       }))
     //GET THE CHANNEL
