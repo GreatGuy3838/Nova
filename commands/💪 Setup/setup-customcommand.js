@@ -107,7 +107,7 @@ module.exports = {
               tempmsg = await message.channel.send(new Discord.MessageEmbed()
                 .setTitle("What Should the Custom Command send?")
                 .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-                .setDescription(`Please just type the content in the Chat\nExample: \`Discord Server: https://discord.gg/zwBRBu7WHW\``)
+                .setDescription(`Please just type the content in the Chat\nExample: \`Discord Server: https://discord.gg/scazJBasBM\``)
                 .setFooter(es.footertext, es.footericon)
               )
               await tempmsg.channel.awaitMessages(m => m.author.id === message.author.id, {

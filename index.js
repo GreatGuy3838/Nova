@@ -2,17 +2,11 @@ const Discord = require("discord.js");
 const colors = require("colors");
 const Enmap = require("enmap");
 const fs = require("fs");
-const DBL = require('dblapi.js');
 const express = require('express');
+const DBL = require('dblapi.js');
 const Emoji = require("./botconfig/emojis.json")
+const { prefix, ServerID } = require("./botconfig/config.json")
 const config = require("./botconfig/config.json")
-
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => res.send('NOVA OFFICIAL'));
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 const client = new Discord.Client({
 
@@ -92,6 +86,7 @@ function requiresociallogs(){
   })
 }requiresociallogs();
 
+
 function requireallhandlers(){
   client.allhandlers = Array(
     "apply", "apply2", "apply3", "apply4", "apply5",
@@ -129,7 +124,6 @@ const slash = new Slash({
 })
 const embed = new MessageEmbed();
 
-const keepAlive = require('./keepAlive.js');
 
 slash.on("create", (d) => {
     console.log(`Command created: ${JSON.parse(d.config.data).name}`)
@@ -295,5 +289,13 @@ client.on("ready", () => {
         }
     })
 })
+
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => res.send('Nova'));
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 client.login(process.env.TOKEN)

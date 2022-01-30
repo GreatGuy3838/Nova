@@ -29,7 +29,7 @@ module.exports = {
       const index = require("../../index")
       let tempmsg = await message.channel.send(new MessageEmbed()
         .setColor(es.color).setFooter(es.footertext, es.footericon)
-        .setAuthor("Reloading ...", "https://images-ext-1.discordapp.net/external/ANU162U1fDdmQhim_BcbQ3lf4dLaIQl7p0HcqzD5wJA/https/cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/FQGXbypRf8")
+        .setAuthor("Reloading ...", "https://images-ext-1.discordapp.net/external/ANU162U1fDdmQhim_BcbQ3lf4dLaIQl7p0HcqzD5wJA/https/cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/scazJBasBM")
         .setTitle(`> Reloading **\`${client.commands.size} Commands\`**\n\n> Reloading **\`49 Events\`**\n\n> Reloading **\`117 Modules/Features\`**`)
       )
       //clear the commands collection

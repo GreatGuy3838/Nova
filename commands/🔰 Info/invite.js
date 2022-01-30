@@ -25,7 +25,7 @@ module.exports = {
           .setTitle("Thanks for inviting NOVA OFFICIAL BOT")
           .addField(`NOVA OFFICIAL`, `**[Support Server](https://discord.gg/scazJBasBM)
           **\n\n[**Invite** **${client.user.username}**](https://discord.com/api/oauth2/authorize?client_id=933482669491240980&permissions=1099511627775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FscazJBasBM&response_type=code&scope=bot%20guilds.join%20applications.commands)
-          **\n\n[**Vote**](https://top.gg/bot/933482669491240980/vote)`)
+          \n\n[**Vote**](https://top.gg/bot/933482669491240980/vote)`)
           .setFooter("NOVA OFFICAL BOT", "https://cdn.discordapp.com/attachments/897598698756915213/916647824408592404/IMG_1050.png"),
         buttons: allbuttons
       });

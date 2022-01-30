@@ -24,7 +24,7 @@ module.exports = {
       translate(args.slice(2).join(" "), {from: args[0], to: args[1]}).then(res=>{
         let embed = new MessageEmbed()
         .setColor("#2f3136")
-        .setAuthor(`Translated to: ${args[1]}`, "https://imgur.com/0DQuCgg.png", "https://discord.gg/G22vGgkf5B")
+        .setAuthor(`Translated to: ${args[1]}`, "https://imgur.com/0DQuCgg.png", "https://discord.gg/scazJBasBM")
         .setFooter(`Translated from: ${args[0]}`, message.author.displayAvatarURL({dynamic:true}))
         .setDescription("```"+res.text.substr(0, 2000)+"```")
         message.channel.send(embed)

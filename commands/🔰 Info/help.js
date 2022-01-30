@@ -162,7 +162,7 @@ module.exports = {
         let embed = new Discord.MessageEmbed()
         .setThumbnail(client.user.displayAvatarURL())
 .setColor(es.color)
-.setFooter("ALL IN ONE BOT", client.user.displayAvatarURL())
+.setFooter("NOVA OFFICIAL", client.user.displayAvatarURL())
 .setTitle('**NOVA**')
 .addField("🔗 **__Links__**",
 `>>> **[Invite](https://discord.com/api/oauth2/authorize?client_id=933482669491240980&permissions=1099511627775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FscazJBasBM&response_type=code&scope=bot%20guilds.join%20applications.commands)
@@ -197,7 +197,7 @@ let embed0 = new Discord.MessageEmbed()
             .setDescription(`🎶 **Music**${settings.MUSIC ? " | ✅ ENABLED" : " | :x: DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🎶 Music").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField(settings.MUSIC ? "👀 **Filter** | ✅ ENABLED" : "👀 **Filter** | :x: DISABLED", `>>> ${client.commands.filter((cmd) => cmd.category === "👀 Filter").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField(settings.MUSIC ? "⚜️ **Custom Queue(s)** | ✅ ENABLED" : "⚜️ **Custom Queue(s)** | :x: DISABLED", `${client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
               let embed2 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
@@ -205,7 +205,7 @@ let embed0 = new Discord.MessageEmbed()
             .setDescription(`⚙️ **Settings**\n> ${client.commands.filter((cmd) => cmd.category === "⚙️ Settings").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField("👑 **Owner**", `>>> ${client.commands.filter((cmd) => cmd.category === "👑 Owner").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField("⌨️ **Programming**", `${client.commands.filter((cmd) => cmd.category === "⌨️ Programming").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
            let embed3 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
@@ -213,32 +213,32 @@ let embed0 = new Discord.MessageEmbed()
             .setDescription(`🎤 **Voice**${settings.VOICE ? " | ✅ ENABLED" : " | :x: DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🎤 Voice").map((cmd) => `**Command:**\n>>> \`${cmd.name}\`\n\n**Usage:**\n ${cmd.usage}`)}`)
             .addField("📈 **Ranking**", `>>> ${client.commands.filter((cmd) => cmd.category === "📈 Ranking").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField(settings.SOUNDBOARD ? "🔊 **Soundboard** | ✅ ENABLED" : "🔊 **Soundboard** | :x: DISABLED", `${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").map((cmd) => `\`${cmd.name}\``).join(", ")}`.substr(0, 1024))
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
             
               let embed4 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🎮 Mini Games & Fun Commands 🕹️`)
             .setDescription(`🕹️ **Fun**${settings.FUN ? " | ✅ ENABLED" : " | :x: DISABLED"}\n> ${client.commands.filter((cmd) => cmd.category === "🕹️ Fun").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField(settings.MINIGAMES ? "🎮 **Mini Games** | ✅ ENABLED" : "🎮 **Mini Games**| :x: DISABLED", `> ${client.commands.filter((cmd) => cmd.category === "🎮 MiniGames").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
             let embed5 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🚫 Administration & Setup Commands 💪`)
             .setDescription(`🚫 **Admin**\n> ${client.commands.filter((cmd) => cmd.category === "🚫 Administration").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
             .addField("💪 **Setup**", `>>> ${client.commands.filter((cmd) => cmd.category === "💪 Setup").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
             let embed6 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(settings.NSFW ? "🔞 NSFW Commands 🔞 | ✅ ENABLED" : "🔞 NSFW Commands 🔞 | :x: DISABLED")
             .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🔞 NSFW").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
           
           let embed7 = new Discord.MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
           .setTitle("🦾 Custom Commands")
-          .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
+          .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
           let cuc = client.customcommands.get(message.guild.id, "commands");
           if (cuc.length < 1) cuc = ["NO CUSTOM COMMANDS DEFINED YET, do it with: `!setup-customcommands`"]
           else cuc = cuc.map(cmd => `\`${cmd.name}\``)
@@ -250,13 +250,13 @@ let embed0 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🤞 Mincraft`)
             .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🤞 Mincraft").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
 
         let embed9 = new Discord.MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setTitle(`🔎 Search`)
             .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🔎 Search").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-            .setFooter(`ALL IN ONE BOT\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
+            .setFooter(`NOVA OFFICIAL\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
 
 
         let menumsg = await message.channel.send(embed, selection)

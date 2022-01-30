@@ -42,7 +42,7 @@ module.exports = {
           member.send(new MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
             .setFooter(es.footertext, es.footericon)
-            .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/FQGXbypRf8")
+            .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/scazJBasBM")
             .setDescription(args.slice(1).join(" ").substr(0, 2048))
           )
           message.channel.send(new MessageEmbed()

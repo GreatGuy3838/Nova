@@ -43,7 +43,7 @@ module.exports = {
         message.channel.send(new Discord.MessageEmbed()
         .setAuthor("Server Information About: " +  message.guild.name, message.guild.iconURL({
           dynamic: true
-        }), "https://discord.gg/nSD9qV95p4")
+        }), "https://discord.gg/scazJBasBM")
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
         .addField("<:emoji_13:911956334289747968> Owner", `${message.guild.owner.user}\n\`${message.guild.owner.user.tag}\``, true)
         .addField("<:emoji_13:911956334289747968> Created On", "\`" + moment(message.guild.createdTimestamp).format("DD/MM/YYYY") + "\`\n" + "`"+ moment(message.guild.createdTimestamp).format("hh:mm:ss") +"`", true)

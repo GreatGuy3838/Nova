@@ -69,7 +69,7 @@ module.exports = {
         //create the EMBED
         const embeduserinfo = new MessageEmbed()
         embeduserinfo.setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
-        embeduserinfo.setAuthor("Information about:   " + member.user.username + "#" + member.user.discriminator, member.user.displayAvatarURL({ dynamic: true }), "https://discord.gg/G22vGgkf5B")
+        embeduserinfo.setAuthor("Information about:   " + member.user.username + "#" + member.user.discriminator, member.user.displayAvatarURL({ dynamic: true }), "https://discord.gg/scazJBasBM")
         embeduserinfo.addField('**<:RGBARROWRIGHT:914738789681885214> Username:**',`<@${member.user.id}>\n\`${member.user.tag}\``,true)
         embeduserinfo.addField('**<:RGBARROWRIGHT:914738789681885214> ID:**',`\`${member.id}\``,true)
         embeduserinfo.addField('**<:RGBARROWRIGHT:914738789681885214> Avatar:**',`[\`Link to avatar\`](${member.user.displayAvatarURL({ format: "png" })})`,true)
