@@ -2,12 +2,14 @@ const Discord = require("discord.js");
 const colors = require("colors");
 const Enmap = require("enmap");
 const fs = require("fs");
-const express = require('express');
+const keepAlive = require('./server');
+const { Webhook, MessageBuilder } = require('discord-webhook-node');
+const hook = new Webhook("https://discord.com/api/webhooks/927551202600812616/FUNH82eWYnR26HUEqfouInDggzO91qCgrJM-BEHO5bnivEg44AB6QGeGLZQi_T7kXpvR");
 const DBL = require('dblapi.js');
 const Emoji = require("./botconfig/emojis.json")
 const { prefix, ServerID } = require("./botconfig/config.json")
 const config = require("./botconfig/config.json")
-
+    
 const client = new Discord.Client({
 
   fetchAllMembers: false,
@@ -47,6 +49,20 @@ dbl.webhook.on('vote', vote => {
   channel.send(embed)
 });
 
+client.on('guildCreate', guild => {
+
+  guild.systemChannel.send(`**Thanks for inviting me!**\r\n\r\nGet a list of my commands by doing **!help**!\r\n\r\n**Invite:** https://discord.com/api/oauth2/authorize?client_id=933482669491240980&permissions=1099511627775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FscazJBasBM&response_type=code&scope=bot%20guilds.join%20applications.commands\r\n\r\n**Support Server:** https://discord.gg/scazJBasBM\r\n\r\n**Vote:** https://top.gg/bot/933482669491240980/vote`)
+
+const embed = new MessageBuilder()
+.setTitle('I Joined A Guild!')
+.setDescription(`**Guild Name:** ${guild.name} (${guild.id})\n**Members:** ${guild.memberCount}`)
+.setTimestamp()
+.setColor('RANDOM')
+.setFooter(`I'm in ${client.guilds.cache.size} Guilds Now!`);
+  
+hook.send(embed);
+});
+
 client.setMaxListeners(50);
 require('events').defaultMaxListeners = 50;
 
@@ -56,7 +72,7 @@ client.memer = new Meme("D7FKH5ltWUe");
 client.adenabled = true;
 client.statusad = {
   name: `!help | NOVA OFFICIAL BOT`,
-  type: "STREAMING", 
+  type: "PLAYING", 
   url: ""
 };
 client.spacedot = "・";
@@ -103,7 +119,8 @@ function requireallhandlers(){
   });
 }requireallhandlers();
 
- client.login(process.env.TOKEN);
+keepAlive();
+client.login(process.env.TOKEN);
 
 module.exports.requirehandlers = requirehandlers;
 module.exports.requiresociallogs = requiresociallogs;
@@ -290,12 +307,5 @@ client.on("ready", () => {
     })
 })
 
-
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => res.send('Nova'));
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 client.login(process.env.TOKEN)
